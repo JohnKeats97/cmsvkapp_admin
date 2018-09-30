@@ -6,6 +6,8 @@ import pageConfig from '../config/pages'
 import {SetObjectValue} from '../utils/GetSetObjectValue'
 import Fetch from '../utils/fetch'
 
+import './style.css';
+
 
 export default class Background extends React.Component {
 
@@ -35,7 +37,7 @@ export default class Background extends React.Component {
     }
 
     render () {
-        return <div>
+        return <div className='root'>
             <LeftPanel pageConfig={this.state.pageConfig} onChange={this.onChange.bind(this)}/>
             <RightPanel pageConfig={this.state.pageConfig}/>
         </div>
