@@ -26,6 +26,7 @@ export default class Background extends React.Component {
                     });
                 }
             });
+        // Fetch.Post('/test/config', pageConfig);
     }
 
     onChange (args) {

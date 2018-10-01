@@ -4,8 +4,8 @@ export default {
             background: '#ffbdd3'
         },
         buttonOK: {
-            heigth: 50,
-            weigth: 100
+            height: '50px',
+            width: '100px'
         }
     },
     2: 'first',

@@ -4,7 +4,7 @@ export default {
         background: 'addressPage.background.background'
     },
     buttonOK: {
-        heigth: '',
-        weigth: ''
+        height: 'addressPage.buttonOK.height',
+        width: 'addressPage.buttonOK.width'
     }
 }

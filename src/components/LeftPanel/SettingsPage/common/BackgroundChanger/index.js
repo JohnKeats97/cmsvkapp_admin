@@ -29,15 +29,15 @@ export default class BackgroundChanger extends React.Component {
         return <div
             className="components-LeftPanel-SettingPage-common-BackgroundChanger-root"
         >
-            Background:
+            <div
+                className="components-LeftPanel-SettingPage-common-BackgroundChanger-colorCircle"
+                style={styleColorCircle}/>
+            {props.title}
             <input
                 className="components-LeftPanel-SettingPage-common-BackgroundChanger-input"
                 value={props.data}
                 onChange={this.onChange.bind(this)}
             />
-            <div
-                className="components-LeftPanel-SettingPage-common-BackgroundChanger-colorCircle"
-                style={styleColorCircle}/>
         </div>
     }
 };

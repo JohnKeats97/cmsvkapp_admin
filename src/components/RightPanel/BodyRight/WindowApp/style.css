@@ -2,11 +2,7 @@
     height: 596px;
     width: 838px;
 
-
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    margin-top: 50%;
+    position:absolute;
+    left:50%;
+    margin-top:25%;
 }

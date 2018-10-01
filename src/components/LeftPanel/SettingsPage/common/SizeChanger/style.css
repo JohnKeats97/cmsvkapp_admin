@@ -1,0 +1,17 @@
+.components-LeftPanel-SettingPage-common-SizeChanger-root {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #C5EFF4;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.components-LeftPanel-SettingPage-common-SizeChanger-input {
+    border: none;
+    outline: 0;
+    margin: 0 3px 0 7px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 15px;
+}
