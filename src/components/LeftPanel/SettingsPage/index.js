@@ -5,15 +5,30 @@ import AddressPage from './AddressPage'
 import './style.css';
 
 
-export default (props) => {
+export default class SettingsPage extends React.Component {
 
-    // TODO сделать динамический maxHeigth
+    constructor() {
+        super();
 
-    return <div className="components-LeftPanel-SettingPage-root">
-        <AddressPage
-            className="components-LeftPanel-SettingPage-page"
-            pageConfig={props.pageConfig}
-            onChange={props.onChange}
-        />
-    </div>
-};
+        this.state = {
+            style: {
+                maxHeigth: '460px'
+            }
+        };
+    }
+
+    componentWillMount() {
+        console.log(document.documentElement.clientHeight);
+    }
+
+    render () {
+        const {props} = this;
+        return <div className="components-LeftPanel-SettingPage-root">
+            <AddressPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig}
+                onChange={props.onChange}
+            />
+        </div>
+    }
+}

@@ -1,0 +1,12 @@
+.components-LeftPanel-SettingPage-root {
+    background-color: aliceblue;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-y: scroll;
+    max-height: 460px;
+}
+
+.components-LeftPanel-SettingPage-page {
+    padding: 15px;
+}

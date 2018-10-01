@@ -1,0 +1,28 @@
+.components-LeftPanel-SettingPage-common-BackgroundChanger-root {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #C5EFF4;
+    border-radius: 4px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.components-LeftPanel-SettingPage-common-BackgroundChanger-input {
+    border: none;
+    outline: 0;
+    margin-left: 7px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.components-LeftPanel-SettingPage-common-BackgroundChanger-colorCircle {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+    visibility: visible;
+    transition: visibility 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}

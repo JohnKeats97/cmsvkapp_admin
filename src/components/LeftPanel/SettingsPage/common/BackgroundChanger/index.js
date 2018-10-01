@@ -26,7 +26,9 @@ export default class BackgroundChanger extends React.Component {
             visibility: isColor(props.data) ? 'visible' : 'hidden'
         };
 
-        return <div className="components-LeftPanel-SettingPage-common-BackgroundChanger-root">
+        return <div
+            className="components-LeftPanel-SettingPage-common-BackgroundChanger-root"
+        >
             Background:
             <input
                 className="components-LeftPanel-SettingPage-common-BackgroundChanger-input"
