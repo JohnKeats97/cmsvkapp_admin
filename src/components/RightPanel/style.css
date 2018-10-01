@@ -1,5 +1,4 @@
 .components-RightPanel-root {
-    float: left;
-    display: block;
+    display: inline-block;
     position: relative;
 }

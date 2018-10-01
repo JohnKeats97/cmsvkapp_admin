@@ -5,6 +5,8 @@ import './style.css';
 
 export default (props) => {
     return <div className="components-RightPanel-HeaderRight-root">
-        <h1>HEADER RIGHT</h1>
+        <div className="col-lg-8"/>
+        <button className="components-RightPanel-HeaderRight-button">deploy</button>
+        <button className="components-RightPanel-HeaderRight-button">log out</button>
     </div>
 };

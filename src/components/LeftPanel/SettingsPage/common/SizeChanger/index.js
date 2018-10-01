@@ -11,7 +11,11 @@ export default class SizeChanger extends React.Component {
 
 
     onChange (e) {
-        this.props.onChange({value: `${e.target.value}px`, pathConfig: this.props.pathConfig});
+        if(!e.target.value) {
+            this.props.onChange({value: `0px`, pathConfig: this.props.pathConfig});
+            return;
+        }
+        this.props.onChange({value: `${Number(e.target.value)}px`, pathConfig: this.props.pathConfig});
     }
 
     render () {
@@ -27,7 +31,6 @@ export default class SizeChanger extends React.Component {
                 value={value}
                 onChange={this.onChange.bind(this)}
             />
-            px
         </div>
     }
 };

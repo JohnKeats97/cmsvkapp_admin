@@ -1,6 +1,5 @@
 .components-LeftPanel-root {
-    float: left;
-    display: block;
+    display: inline-block;
     position: relative;
-    margin: 10px;
+    margin-top: 10px;
 }

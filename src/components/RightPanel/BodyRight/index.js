@@ -7,6 +7,7 @@ import './style.css';
 
 export default (props) => {
     return <div className="components-RightPanel-BodyRight-root">
-        <WindowApp pageConfig={props.pageConfig}/>
+        <div className="col-lg-1"/>
+        <WindowApp pageConfig={props.pageConfig} className="col-lg-8"/>
     </div>
 };

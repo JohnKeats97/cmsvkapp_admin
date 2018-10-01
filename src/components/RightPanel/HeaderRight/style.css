@@ -1,4 +1,13 @@
 .components-RightPanel-HeaderRight-root {
     display: block;
     position: relative;
+    margin-top: 10px;
+}
+
+.components-RightPanel-HeaderRight-button {
+    height: 50px;
+    width: 100px;
+    margin-left: 30px;
+    border-radius: 6px;
+    outline: 0;
 }

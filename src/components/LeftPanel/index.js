@@ -8,7 +8,7 @@ import './style.css';
 
 
 export default (props) => {
-    return <div className={cn('components-LeftPanel-root')}>
+    return <div className={cn('components-LeftPanel-root', 'col-lg-3')}>
         <ListPages pageConfig={props.pageConfig}/>
         <SettingsPage pageConfig={props.pageConfig} onChange={props.onChange}/>
     </div>
