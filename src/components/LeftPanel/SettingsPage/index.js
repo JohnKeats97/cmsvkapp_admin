@@ -12,18 +12,24 @@ export default class SettingsPage extends React.Component {
 
         this.state = {
             style: {
-                maxHeigth: '460px'
+                maxHeight: '466px'
             }
         };
+
+        this.ClassName = "components-LeftPanel-SettingPage-root";
     }
 
-    componentWillMount() {
-        console.log(document.documentElement.clientHeight);
+    componentDidMount() {
+        const {top} = document.querySelector(`.${this.ClassName}`).getBoundingClientRect();
+        const maxHeight = document.documentElement.clientHeight - top - 15;
+        this.setState((state => (state.style = {
+            maxHeight: `${maxHeight}px`
+        },state)));
     }
 
     render () {
-        const {props} = this;
-        return <div className="components-LeftPanel-SettingPage-root">
+        const {state, props, ClassName} = this;
+        return <div className={ClassName} style={state.style}>
             <AddressPage
                 className="components-LeftPanel-SettingPage-page"
                 pageConfig={props.pageConfig}
