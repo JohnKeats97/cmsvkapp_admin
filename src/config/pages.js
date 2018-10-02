@@ -1,5 +1,6 @@
 export default {
     addressPage: {
+        namePage: 'Страница ввода адреса',
         background: {
             background: '#ffbdd3'
         },
@@ -8,10 +9,28 @@ export default {
             width: '100px'
         }
     },
-    2: 'first',
-    3: 'first',
-    4: 'first',
-    5: 'first',
-    6: 'first',
-    7: 'first',
+    menuPage: {
+        namePage: 'Меню',
+        background: {
+            background: '#ffbd22'
+        }
+    },
+    productPage: {
+        namePage: 'Страница блюда',
+        background: {
+            background: '#ff1111'
+        }
+    },
+    basketPage: {
+        namePage: 'Корзина покупок',
+        background: {
+            background: '#f323D3'
+        }
+    },
+    payPage: {
+        namePage: 'Страница оплаты',
+        background: {
+            background: '#000fff'
+        }
+    },
 }

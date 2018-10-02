@@ -12,6 +12,6 @@ export default (props) => {
         className={cn('components-RightPanel-root', 'col-lg-9')}
     >
         <HeaderRigth />
-        <BodyRigth pageConfig={props.pageConfig}/>
+        <BodyRigth page={props.page} pageConfig={props.pageConfig}/>
     </div>
 };

@@ -1,3 +1,8 @@
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-root {
     height: 100%;
+    display: none;
+}
+
+.addressPage .components-RightPanel-BodyRight-WindowApp-AddressWindow-root {
+    display: block;
 }

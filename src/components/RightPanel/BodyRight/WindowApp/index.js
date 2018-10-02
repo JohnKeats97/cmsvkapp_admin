@@ -8,7 +8,7 @@ import './style.css';
 
 export default (props) => {
     return <div
-        className={cn("components-RightPanel-BodyRight-WindowApp-root", props.className)}
+        className={cn("components-RightPanel-BodyRight-WindowApp-root", props.className, props.page)}
     >
         <AddresWindow pageConfig={props.pageConfig}/>
     </div>
