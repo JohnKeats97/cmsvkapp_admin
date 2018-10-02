@@ -6,8 +6,7 @@ import './style.css';
 export default (props) => {
 
     return <div
-        className="components-RightPanel-BodyRight-WindowApp-AddressWindow-root"
+        className="components-RightPanel-BodyRight-WindowApp-BasketWindow-root"
         style={props.pageConfig.background} >
-        <button style={props.pageConfig.buttonOK}>Принять</button>
     </div>
 };

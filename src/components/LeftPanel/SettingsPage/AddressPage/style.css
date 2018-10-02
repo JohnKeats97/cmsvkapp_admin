@@ -1,4 +1,7 @@
 .components-LeftPanel-SettingPage-AddressPage-root {
-
+    display: none;
 }
 
+.addressPage .components-LeftPanel-SettingPage-AddressPage-root {
+    display: block;
+}

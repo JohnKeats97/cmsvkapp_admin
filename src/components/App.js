@@ -47,6 +47,7 @@ export default class Background extends React.Component {
         return <div className='root'>
             <LeftPanel
                 pageConfig={state.pageConfig}
+                page={state.page}
                 onChange={this.onChange.bind(this)}
                 onClick={this.onClickItemListPages.bind(this)}
             />
