@@ -3,7 +3,7 @@
     margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .components-LeftPanel-SettingPage-page {

@@ -1,6 +1,11 @@
 .components-LeftPanel-root {
     display: inline-block;
     position: relative;
-    margin-top: 10px;
     min-width: 360px;
+}
+
+.components-LeftPanel-fixed {
+    position: fixed;
+    z-index: 2;
+    margin-top: 10px;
 }

@@ -8,8 +8,10 @@ import './style.css';
 
 
 export default (props) => {
-    return <div className={cn('components-LeftPanel-root', 'col-lg-3')}>
-        <ListPages pageConfig={props.pageConfig} onClick={props.onClick}/>
-        <SettingsPage page={props.page} pageConfig={props.pageConfig} onChange={props.onChange}/>
+    return <div className={cn('components-LeftPanel-root', 'col-xs-3')}>
+        <div className="components-LeftPanel-fixed">
+            <ListPages pageConfig={props.pageConfig} onClick={props.onClick}/>
+            <SettingsPage page={props.page} pageConfig={props.pageConfig} onChange={props.onChange}/>
+        </div>
     </div>
 };
