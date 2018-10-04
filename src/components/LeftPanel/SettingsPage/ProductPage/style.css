@@ -1,0 +1,7 @@
+.components-LeftPanel-SettingPage-ProductPage-root {
+    display: none;
+}
+
+.productPage .components-LeftPanel-SettingPage-ProductPage-root {
+    display: block;
+}

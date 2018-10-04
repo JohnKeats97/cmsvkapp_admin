@@ -18,15 +18,15 @@ export default class Background extends React.Component {
             page: 'addressPage'
         };
 
-        // Fetch.Get('/test/config')
-        //     .then(response => {
-        //         if (response) {
-        //             this.setState((state)=>{
-        //                 state.pageConfig = response;
-        //                 return state;
-        //             });
-        //         }
-        //     });
+        Fetch.Get('/test/config')
+            .then(response => {
+                if (response) {
+                    this.setState((state)=>{
+                        state.pageConfig = response;
+                        return state;
+                    });
+                }
+            });
         // Fetch.Post('/test/config', pageConfig);
     }
 

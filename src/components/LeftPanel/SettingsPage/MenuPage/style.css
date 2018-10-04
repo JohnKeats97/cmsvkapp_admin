@@ -1,0 +1,7 @@
+.components-LeftPanel-SettingPage-MenuPage-root {
+    display: none;
+}
+
+.menuPage .components-LeftPanel-SettingPage-MenuPage-root {
+    display: block;
+}

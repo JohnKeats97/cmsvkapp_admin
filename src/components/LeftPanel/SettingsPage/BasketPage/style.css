@@ -1,0 +1,7 @@
+.components-LeftPanel-SettingPage-BasketPage-root {
+    display: none;
+}
+
+.basketPage .components-LeftPanel-SettingPage-BasketPage-root {
+    display: block;
+}

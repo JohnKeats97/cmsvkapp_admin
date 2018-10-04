@@ -1,0 +1,7 @@
+.components-LeftPanel-SettingPage-PayPage-root {
+    display: none;
+}
+
+.payPage .components-LeftPanel-SettingPage-PayPage-root {
+    display: block;
+}

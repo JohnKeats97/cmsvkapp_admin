@@ -1,6 +1,11 @@
 import React from 'react'
 
 import AddressPage from './AddressPage'
+import BasketPage from './BasketPage'
+import MenuPage from './MenuPage'
+import PayPage from './PayPage'
+import ProductPage from './ProductPage'
+
 import cn from '../../../utils/cn'
 
 import './style.css';
@@ -34,6 +39,26 @@ export default class SettingsPage extends React.Component {
             <AddressPage
                 className="components-LeftPanel-SettingPage-page"
                 pageConfig={props.pageConfig.addressPage}
+                onChange={props.onChange}
+            />
+            <BasketPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig.basketPage}
+                onChange={props.onChange}
+            />
+            <MenuPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig.menuPage}
+                onChange={props.onChange}
+            />
+            <PayPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig.payPage}
+                onChange={props.onChange}
+            />
+            <ProductPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig.productPage}
                 onChange={props.onChange}
             />
         </div>
