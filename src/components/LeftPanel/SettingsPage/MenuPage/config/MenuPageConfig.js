@@ -1,6 +1,6 @@
 export default {
     pageName: 'MenuPage',
     background: {
-        background: 'menuPage.background.background'
+        background: 'menuPage.background.style.background'
     }
 }

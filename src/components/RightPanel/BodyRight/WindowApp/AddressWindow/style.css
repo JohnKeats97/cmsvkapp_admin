@@ -6,3 +6,13 @@
 .addressPage .components-RightPanel-BodyRight-WindowApp-AddressWindow-root {
     display: block;
 }
+
+.components-RightPanel-BodyRight-WindowApp-AddressWindow-title {
+    display: block;
+    position: absolute;
+}
+
+.components-RightPanel-BodyRight-WindowApp-AddressWindow-buttonOk {
+    display: block;
+    position: absolute;
+}

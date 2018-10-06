@@ -1,4 +1,4 @@
-.components-LeftPanel-SettingPage-common-SizeChanger-root {
+.components-LeftPanel-SettingPage-common-TextChanger-root {
     text-align: right;
     margin: 10px 0;
     padding: 10px;
@@ -8,7 +8,7 @@
     font-size: 18px;
 }
 
-.components-LeftPanel-SettingPage-common-SizeChanger-input {
+.components-LeftPanel-SettingPage-common-TextChanger-input {
     border: none;
     outline: 0;
     margin: 0 3px 0 7px;

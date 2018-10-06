@@ -1,7 +1,7 @@
 import React from 'react'
 
 import BackgroundChanger from '../common/BackgroundChanger'
-import SizeChanger from '../common/SizeChanger'
+import SizeChanger from '../common/NumberChanger'
 import BasketPageConfig from './config/BasketPageConfig'
 import cn from '../../../../utils/cn'
 
@@ -13,7 +13,7 @@ export default (props) => {
         <BackgroundChanger
             title="Background:"
             pathConfig={BasketPageConfig.background.background}
-            data={props.pageConfig.background.background}
+            data={props.pageConfig.background.style.background}
             onChange={props.onChange}
         />
 

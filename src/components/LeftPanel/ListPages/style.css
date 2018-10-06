@@ -10,6 +10,7 @@
     background-color: #fff;
     border: 1px solid #ddd;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .components-LeftPanel-ListPages-item:first-child {

@@ -1,6 +1,6 @@
 export default {
     pageName: 'BasketPage',
     background: {
-        background: 'basketPage.background.background'
+        background: 'basketPage.background.style.background'
     }
 }

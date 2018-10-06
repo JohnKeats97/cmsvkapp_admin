@@ -7,6 +7,6 @@ export default (props) => {
 
     return <div
         className="components-RightPanel-BodyRight-WindowApp-MenuWindow-root"
-        style={props.pageConfig.background} >
+        style={props.pageConfig.background.style} >
     </div>
 };

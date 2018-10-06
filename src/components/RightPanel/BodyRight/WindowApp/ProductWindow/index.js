@@ -7,6 +7,6 @@ export default (props) => {
 
     return <div
         className="components-RightPanel-BodyRight-WindowApp-ProductWindow-root"
-        style={props.pageConfig.background} >
+        style={props.pageConfig.background.style} >
     </div>
 };
