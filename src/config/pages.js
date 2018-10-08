@@ -6,8 +6,8 @@ export default {
             style: {
                 color: '#000000',
                 fontSize: '20px',
-                left: '200px',
-                top: '200px',
+                left: '270px',
+                top: '250px',
             }
         },
         background: {
@@ -23,8 +23,8 @@ export default {
                 height: '50px',
                 width: '100px',
                 borderRadius: '10px',
-                left: '100px',
-                top: '100px',
+                left: '570px',
+                top: '300px',
                 outline: 'none'
             }
         }
