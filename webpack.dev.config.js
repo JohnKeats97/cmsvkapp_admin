@@ -12,7 +12,7 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname),
         compress: true,
-        port: 9000,
+        port: 8080,
         host: 'localhost',
         open: true
     },
