@@ -3,6 +3,7 @@ import React from 'react'
 import AddressPage from './AddressPage'
 import BasketPage from './BasketPage'
 import MenuPage from './MenuPage'
+import LoadingPage from './LoadingPage'
 import PayPage from './PayPage'
 import ProductPage from './ProductPage'
 
@@ -36,6 +37,11 @@ export default class SettingsPage extends React.Component {
     render () {
         const {state, props, ClassName} = this;
         return <div className={cn(ClassName, props.page)} style={state.style}>
+            <LoadingPage
+                className="components-LeftPanel-SettingPage-page"
+                pageConfig={props.pageConfig.loadingPage}
+                onChange={props.onChange}
+            />
             <AddressPage
                 className="components-LeftPanel-SettingPage-page"
                 pageConfig={props.pageConfig.addressPage}

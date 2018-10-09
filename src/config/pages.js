@@ -1,4 +1,12 @@
 export default {
+    loadingPage: {
+        namePage: 'Страница загрузки',
+        background: {
+            style: {
+                background: '#ffbdd2'
+            }
+        },
+    },
     addressPage: {
         namePage: 'Страница ввода адреса',
         title: {

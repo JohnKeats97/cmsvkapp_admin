@@ -1,0 +1,7 @@
+.components-LeftPanel-SettingPage-LoadingPage-root {
+    display: none;
+}
+
+.loadingPage .components-LeftPanel-SettingPage-LoadingPage-root {
+    display: block;
+}
