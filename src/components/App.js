@@ -27,13 +27,13 @@ export default class Background extends React.Component {
         //             });
         //         }
         //     });
-        // Fetch.Post('/test/config', pageConfig);
+        Fetch.Post('/test/config', pageConfig);
     }
 
     onChange (args) {
         this.setState((state)=>{
             state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post('/test/config', state.pageConfig);
+            // Fetch.Post('/test/config', state.pageConfig);
             return state;
         });
     }

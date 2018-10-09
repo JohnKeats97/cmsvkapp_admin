@@ -12,7 +12,6 @@ export default {
     },
     buttonOK: {
         text: 'addressPage.buttonOK.text',
-        title: 'addressPage.buttonOK.title',
         height: 'addressPage.buttonOK.style.height',
         width: 'addressPage.buttonOK.style.width',
         background: 'addressPage.buttonOK.style.background',
@@ -20,5 +19,17 @@ export default {
         color: 'addressPage.buttonOK.style.color',
         top: 'addressPage.buttonOK.style.top',
         left: 'addressPage.buttonOK.style.left',
+        fontSize: 'addressPage.buttonOK.style.fontSize'
+    },
+    inputAddress: {
+        placeholder: 'addressPage.inputAddress.placeholder',
+        height: 'addressPage.inputAddress.style.height',
+        width: 'addressPage.inputAddress.style.width',
+        background: 'addressPage.inputAddress.style.background',
+        borderRadius: 'addressPage.inputAddress.style.borderRadius',
+        color: 'addressPage.inputAddress.style.color',
+        top: 'addressPage.inputAddress.style.top',
+        left: 'addressPage.inputAddress.style.left',
+        fontSize: 'addressPage.inputAddress.style.fontSize'
     }
 }
