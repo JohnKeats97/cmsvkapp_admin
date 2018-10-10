@@ -6,6 +6,28 @@ export default {
                 background: '#ffbdd2'
             }
         },
+        title: {
+            text: 'Загрузка...',
+            style: {
+                color: '#000000',
+                fontSize: '30px',
+                left: '310px',
+                top: '250px',
+            }
+        },
+        loader: {
+            style: {
+                left: '330px',
+                top: '315px'
+            },
+            circle: {
+                style: {
+                    background: '#000fff',
+                    width: '26px',
+                    height: '26px'
+                }
+            }
+        }
     },
     addressPage: {
         namePage: 'Страница ввода адреса',

@@ -7,3 +7,13 @@
 .loadingPage .components-RightPanel-BodyRight-WindowApp-LoadingWindow-root {
     display: block;
 }
+
+.components-RightPanel-BodyRight-WindowApp-LoadingWindow-loader {
+    position: absolute;
+    display: block;
+}
+
+.components-RightPanel-BodyRight-WindowApp-LoadingWindow-title {
+    display: block;
+    position: absolute;
+}
