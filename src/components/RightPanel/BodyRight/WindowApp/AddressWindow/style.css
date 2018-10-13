@@ -1,4 +1,5 @@
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-root {
+    position: relative;
     height: 100%;
     display: none;
 }
@@ -14,5 +15,11 @@
 
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-buttonOk {
     display: block;
+    position: absolute;
+    outline: none;
+}
+
+.components-RightPanel-BodyRight-WindowApp-AddressWindow-inputAddress {
+    padding-left: 15px;
     position: absolute;
 }

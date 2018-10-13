@@ -15,6 +15,12 @@ export default class BackgroundChanger extends React.Component {
 
 
     onChange (e) {
+        const isURL = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+        if (isURL.test(e.target.value)) {
+            this.props.onChange({value: `url(${e.target.value})`, pathConfig: this.props.pathConfig});
+            return;
+        }
+
         this.props.onChange({value: e.target.value, pathConfig: this.props.pathConfig});
     }
 

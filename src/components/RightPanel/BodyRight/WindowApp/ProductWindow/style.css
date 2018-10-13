@@ -1,8 +1,18 @@
 .components-RightPanel-BodyRight-WindowApp-ProductWindow-root {
     height: 100%;
     display: none;
+    position: relative;
 }
 
 .productPage .components-RightPanel-BodyRight-WindowApp-ProductWindow-root {
     display: block;
+}
+
+.components-RightPanel-BodyRight-WindowApp-ProductWindow-title {
+    display: block;
+    position: absolute;
+}
+.components-RightPanel-BodyRight-WindowApp-ProductWindow-description {
+    display: block;
+    position: absolute;
 }
