@@ -15,10 +15,12 @@ export default class Background extends React.Component {
         super();
         this.state = {
             pageConfig: pageConfig,
-            page: 'addressPage'
+            page: 'productPage'
         };
 
-        // Fetch.Get('/test/config')
+        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
+
+        // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
         //     .then(response => {
         //         if (response) {
         //             this.setState((state)=>{
@@ -27,13 +29,12 @@ export default class Background extends React.Component {
         //             });
         //         }
         //     });
-        Fetch.Post('/test/config', pageConfig);
     }
 
     onChange (args) {
         this.setState((state)=>{
             state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post('/test/config', state.pageConfig);
+            Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
             return state;
         });
     }

@@ -1,9 +1,11 @@
 import React from 'react'
 
+import AddressPageConfig from './config/AddressPageConfig'
+
 import BackgroundChanger from '../common/BackgroundChanger'
 import NumberChanger from '../common/NumberChanger'
 import TextChanger from '../common/TextChanger'
-import AddressPageConfig from './config/AddressPageConfig'
+
 import cn from '../../../../utils/cn'
 
 import './style.css';
