@@ -162,9 +162,54 @@ export default {
         namePage: 'Корзина покупок',
         background: {
             style: {
-                background: '#ffbdd3'
+                background: 'rgba(46,46,51,.2)'
             }
         },
+        productContainer: {
+            style: {
+                background: '#fff00190',
+                left: '220px'
+            }
+        },
+        foodContainer: {
+            style: {
+                background: '#f6f6f6'
+            }
+        },
+        textContainer: {
+            order: {
+                style: {
+                    color: '#000fff',
+                    fontSize: '18px'
+                }
+            },
+            delivery: {
+                style: {
+                    color: '#000fff',
+                    fontSize: '18px'
+                }
+            },
+            result: {
+                style: {
+                    color: '#000fff',
+                    fontSize: '21px'
+                }
+            }
+        },
+        buttonOK: {
+            text: 'Принять',
+            style: {
+                background: '#97c62b',
+                color: '#000533',
+                height: '40px',
+                width: '300px',
+                borderRadius: '5px',
+                left: '270px',
+                top: '590px',
+                fontSize: '15px',
+                borderWidth: '0px'
+            }
+        }
     },
     payPage: {
         namePage: 'Страница оплаты',

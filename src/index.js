@@ -8,8 +8,3 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-
-
-
-// TODO
-// max-height экрана
