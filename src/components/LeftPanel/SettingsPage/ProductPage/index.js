@@ -12,6 +12,8 @@ import './style.css';
 import AddressPageConfig from "../AddressPage/config/AddressPageConfig";
 
 export default (props) => {
+    const productContainerWidth = props.pageConfig.productContainer.style.width;
+
     return <div className={cn('components-LeftPanel-SettingPage-ProductPage-root', props.className)}>
         {ProductPageConfig.pageName}
         <BackgroundChanger
@@ -54,7 +56,7 @@ export default (props) => {
             title="Width:"
             minValue={0}
             pathConfig={ProductPageConfig.productContainer.width}
-            data={props.pageConfig.productContainer.style.width}
+            data={productContainerWidth}
             onChange={props.onChange}
         />
         <NumberChanger
@@ -67,6 +69,7 @@ export default (props) => {
         <NumberChanger
             title="Position left:"
             minValue={0}
+            maxValue={850 - (productContainerWidth.slice(0, productContainerWidth.length -2) | 0)}
             pathConfig={ProductPageConfig.productContainer.left}
             data={props.pageConfig.productContainer.style.left}
             onChange={props.onChange}

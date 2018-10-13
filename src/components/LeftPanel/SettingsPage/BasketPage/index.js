@@ -32,7 +32,7 @@ export default (props) => {
         <NumberChanger
             title="Basket position left:"
             minValue={0}
-            maxValue={420}
+            maxValue={450}
             pathConfig={BasketPageConfig.productContainer.left}
             data={props.pageConfig.productContainer.style.left}
             onChange={props.onChange}

@@ -11,13 +11,13 @@ export default {
             style: {
                 color: '#000000',
                 fontSize: '30px',
-                left: '310px',
+                left: '350px',
                 top: '250px',
             }
         },
         loader: {
             style: {
-                left: '330px',
+                left: '370px',
                 top: '315px'
             },
             circle: {
@@ -54,7 +54,7 @@ export default {
                 width: '100px',
                 borderRadius: '10px',
                 left: '570px',
-                top: '300px',
+                top: '310px',
                 fontSize: '15px',
                 borderWidth: '1px'
             }
@@ -68,7 +68,7 @@ export default {
                 width: '390px',
                 borderRadius: '10px',
                 left: '170px',
-                top: '300px',
+                top: '310px',
                 outline: 'none',
                 fontSize: '15px',
                 borderWidth: '1px'
