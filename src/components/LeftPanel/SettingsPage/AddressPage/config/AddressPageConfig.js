@@ -19,7 +19,8 @@ export default {
         color: 'addressPage.buttonOK.style.color',
         top: 'addressPage.buttonOK.style.top',
         left: 'addressPage.buttonOK.style.left',
-        fontSize: 'addressPage.buttonOK.style.fontSize'
+        fontSize: 'addressPage.buttonOK.style.fontSize',
+        borderWidth: 'addressPage.buttonOK.style.borderWidth'
     },
     inputAddress: {
         placeholder: 'addressPage.inputAddress.placeholder',
@@ -30,6 +31,7 @@ export default {
         color: 'addressPage.inputAddress.style.color',
         top: 'addressPage.inputAddress.style.top',
         left: 'addressPage.inputAddress.style.left',
-        fontSize: 'addressPage.inputAddress.style.fontSize'
+        fontSize: 'addressPage.inputAddress.style.fontSize',
+        borderWidth: 'addressPage.inputAddress.style.borderWidth'
     }
 }

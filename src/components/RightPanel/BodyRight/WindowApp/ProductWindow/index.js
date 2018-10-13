@@ -4,6 +4,7 @@ import ProductContainer from './ProductContainer'
 import ImageContainer from './ImageContainer'
 import ButtonClose from './ButtonClose'
 import InputCount from './InputCount'
+import ButtonOk from './ButtonOk'
 
 import './style.css';
 
@@ -29,5 +30,6 @@ export default (props) => {
             {props.pageConfig.description.text}
         </div>
         <InputCount config={props.pageConfig.inputCount}/>
+        <ButtonOk config={props.pageConfig.buttonOK}/>
     </div>
 };

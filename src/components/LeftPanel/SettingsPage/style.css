@@ -4,6 +4,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow-y: auto;
+    font-size: 20px;
 }
 
 .components-LeftPanel-SettingPage-page {

@@ -41,5 +41,17 @@ export default {
         left: 'productPage.description.style.left',
         top: 'productPage.description.style.top',
         width: 'productPage.description.style.width'
-    }
+    },
+    buttonOK: {
+        text: 'productPage.buttonOK.text',
+        height: 'productPage.buttonOK.style.height',
+        width: 'productPage.buttonOK.style.width',
+        background: 'productPage.buttonOK.style.background',
+        borderRadius: 'productPage.buttonOK.style.borderRadius',
+        color: 'productPage.buttonOK.style.color',
+        top: 'productPage.buttonOK.style.top',
+        left: 'productPage.buttonOK.style.left',
+        fontSize: 'productPage.buttonOK.style.fontSize',
+        borderWidth: 'productPage.buttonOK.style.borderWidth'
+    },
 }

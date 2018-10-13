@@ -20,6 +20,8 @@ export default (props) => {
             onChange={props.onChange}
         />
 
+        <div style={props.hrStyle}/>
+
         Заголовок
 
         <TextChanger
@@ -56,6 +58,8 @@ export default (props) => {
             onChange={props.onChange}
         />
 
+        <div style={props.hrStyle}/>
+
         Кнопка принять
 
         <BackgroundChanger
@@ -81,6 +85,13 @@ export default (props) => {
             minValue={0}
             pathConfig={AddressPageConfig.buttonOK.fontSize}
             data={props.pageConfig.buttonOK.style.fontSize}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Button border width:"
+            minValue={0}
+            pathConfig={AddressPageConfig.buttonOK.borderWidth}
+            data={props.pageConfig.buttonOK.style.borderWidth}
             onChange={props.onChange}
         />
         <NumberChanger
@@ -119,6 +130,8 @@ export default (props) => {
             onChange={props.onChange}
         />
 
+        <div style={props.hrStyle}/>
+
         Поле ввода адреса
 
         <BackgroundChanger
@@ -151,6 +164,13 @@ export default (props) => {
             minValue={0}
             pathConfig={AddressPageConfig.inputAddress.borderRadius}
             data={props.pageConfig.inputAddress.style.borderRadius}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Input border width:"
+            minValue={0}
+            pathConfig={AddressPageConfig.inputAddress.borderWidth}
+            data={props.pageConfig.inputAddress.style.borderWidth}
             onChange={props.onChange}
         />
         <NumberChanger

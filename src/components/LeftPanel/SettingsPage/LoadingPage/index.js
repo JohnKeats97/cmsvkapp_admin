@@ -19,6 +19,8 @@ export default (props) => {
             onChange={props.onChange}
         />
 
+        <div style={props.hrStyle}/>
+
         Заголовок
 
         <TextChanger
@@ -54,6 +56,8 @@ export default (props) => {
             data={props.pageConfig.title.style.top}
             onChange={props.onChange}
         />
+
+        <div style={props.hrStyle}/>
 
         Лоадер
 

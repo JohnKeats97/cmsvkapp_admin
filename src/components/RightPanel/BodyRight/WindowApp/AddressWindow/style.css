@@ -16,6 +16,7 @@
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-buttonOk {
     display: block;
     position: absolute;
+    outline: none;
 }
 
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-inputAddress {

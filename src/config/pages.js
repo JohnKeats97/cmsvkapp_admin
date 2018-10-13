@@ -55,8 +55,8 @@ export default {
                 borderRadius: '10px',
                 left: '570px',
                 top: '300px',
-                outline: 'none',
-                fontSize: '15px'
+                fontSize: '15px',
+                borderWidth: '1px'
             }
         },
         inputAddress: {
@@ -70,7 +70,8 @@ export default {
                 left: '170px',
                 top: '300px',
                 outline: 'none',
-                fontSize: '15px'
+                fontSize: '15px',
+                borderWidth: '1px'
             }
         }
     },
@@ -141,7 +142,21 @@ export default {
                 top: '290px',
                 width: '270px'
             }
-        }
+        },
+        buttonOK: {
+            text: 'Принять',
+            style: {
+                background: '#97c62b',
+                color: '#000533',
+                height: '40px',
+                width: '300px',
+                borderRadius: '5px',
+                left: '255px',
+                top: '570px',
+                fontSize: '15px',
+                borderWidth: '0px'
+            }
+        },
     },
     basketPage: {
         namePage: 'Корзина покупок',
