@@ -1,61 +1,55 @@
 import React from 'react'
 
-import LeftPanel from './LeftPanel'
-import RightPanel from './RightPanel'
-import pageConfig from '../config/pages'
-import {SetObjectValue} from '../utils/GetSetObjectValue'
+import AdminPanel from './AdminPanelPage'
+import LoginPage from './LoginPage'
+import RegisterPage from './RegisterPage'
 import Fetch from '../utils/fetch'
+import cn from '../utils/cn'
 
 import './style.css';
 
 
-export default class Background extends React.Component {
+export default class App extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            pageConfig: pageConfig,
-            page: 'basketPage'
+            page: 'loginPage'
         };
-
-        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
-
-        // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-        //     .then(response => {
-        //         if (response) {
-        //             this.setState((state)=>{
-        //                 state.pageConfig = response;
-        //                 return state;
-        //             });
-        //         }
-        //     });
     }
+    //
+    //     Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
+    //
+    //     // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
+    //     //     .then(response => {
+    //     //         if (response) {
+    //     //             this.setState((state)=>{
+    //     //                 state.pageConfig = response;
+    //     //                 return state;
+    //     //             });
+    //     //         }
+    //     //     });
+    // }
+    //
+    // onChange (args) {
+    //     this.setState((state)=>{
+    //         state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
+    //         Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
+    //         return state;
+    //     });
+    // }
+    //
 
-    onChange (args) {
-        this.setState((state)=>{
-            state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
-            return state;
-        });
-    }
-
-    onClickItemListPages (page) {
-        this.setState((state)=>(state.page = page, state));
+    onChangePage(newPage) {
+            this.setState((state)=>(state.page = newPage, state));
     }
 
     render () {
         const {state} = this;
-        return <div className='root'>
-            <LeftPanel
-                pageConfig={state.pageConfig}
-                page={state.page}
-                onChange={this.onChange.bind(this)}
-                onClick={this.onClickItemListPages.bind(this)}
-            />
-            <RightPanel
-                pageConfig={state.pageConfig}
-                page={state.page}
-            />
+        return <div className={cn('root', state.page)}>
+            <AdminPanel onChangePage={this.onChangePage.bind(this)}/>
+            <LoginPage onChangePage={this.onChangePage.bind(this)}/>
+            <RegisterPage onChangePage={this.onChangePage.bind(this)}/>
         </div>
     }
 };

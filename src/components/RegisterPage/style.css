@@ -1,0 +1,54 @@
+.RegisterPage-root {
+    position: relative;
+    display: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.registerPage .RegisterPage-root {
+    display: block;
+}
+
+.RegisterPage-heading {
+    font-size: 25px;
+}
+
+.RegisterPage-input {
+    border-radius: 6px;
+}
+
+.RegisterPage-button {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.RegisterPage-buttonSignIn {
+    background-color: #6c92af;
+    border-color: #6c92af;
+}
+
+.RegisterPage-buttonSignUp {
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.RegisterPage-inputEMail {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.RegisterPage-inputLogin {
+    border-radius: 0;
+}
+
+.RegisterPage-inputPassword {
+    position: relative;
+    bottom: 1px;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
