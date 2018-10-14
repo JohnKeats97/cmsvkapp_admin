@@ -3,10 +3,13 @@
     display: none;
     padding-top: 40px;
     padding-bottom: 40px;
+    /*opacity: 0;*/
+    /*transition: opacity 10s ease;*/
 }
 
 .registerPage .RegisterPage-root {
     display: block;
+    /*opacity: 100;*/
 }
 
 .RegisterPage-heading {

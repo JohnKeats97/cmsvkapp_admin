@@ -53,6 +53,7 @@ export default class AdminPanel extends React.Component {
                 onClick={this.onClickItemListPages.bind(this)}
             />
             <RightPanel
+                onChangePage={this.props.onChangePage}
                 pageConfig={state.pageConfig}
                 page={state.page}
             />

@@ -4,6 +4,7 @@ import AdminPanel from './AdminPanelPage'
 import LoginPage from './LoginPage'
 import RegisterPage from './RegisterPage'
 import Fetch from '../utils/fetch'
+import configPage from "./config/configPage";
 import cn from '../utils/cn'
 
 import './style.css';
@@ -47,9 +48,12 @@ export default class App extends React.Component {
     render () {
         const {state} = this;
         return <div className={cn('root', state.page)}>
-            <AdminPanel onChangePage={this.onChangePage.bind(this)}/>
+            {state.page === configPage.adminPanelPage && <AdminPanel onChangePage={this.onChangePage.bind(this)}/>}
             <LoginPage onChangePage={this.onChangePage.bind(this)}/>
             <RegisterPage onChangePage={this.onChangePage.bind(this)}/>
         </div>
     }
 };
+
+
+/// почему смотрит на раge родителя в класс и none выключает а не на себя ??

@@ -49,7 +49,6 @@ export default class RegisterPage extends React.Component {
     }
 
     render () {
-        console.log(this.props)
         const {state} = this;
         return <div className="RegisterPage-root">
             <div className="container">

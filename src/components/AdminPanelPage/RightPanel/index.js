@@ -11,7 +11,7 @@ export default (props) => {
     return <div
         className={cn('components-RightPanel-root', 'col-xs-9')}
     >
-        <HeaderRigth />
+        <HeaderRigth onChangePage={props.onChangePage}/>
         <BodyRigth page={props.page} pageConfig={props.pageConfig}/>
     </div>
 };
