@@ -18,17 +18,17 @@ export default class AdminPanel extends React.Component {
             page: 'basketPage'
         };
 
-        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
+        // Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
 
-        // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-        //     .then(response => {
-        //         if (response) {
-        //             this.setState((state)=>{
-        //                 state.pageConfig = response;
-        //                 return state;
-        //             });
-        //         }
-        //     });
+        Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
+            .then(response => {
+                if (response) {
+                    this.setState((state)=>{
+                        state.pageConfig = response;
+                        return state;
+                    });
+                }
+            });
     }
 
     onChange (args) {
