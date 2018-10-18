@@ -69,7 +69,6 @@ export default {
                 borderRadius: '10px',
                 left: '170px',
                 top: '310px',
-                outline: 'none',
                 fontSize: '15px',
                 borderWidth: '1px'
             }
@@ -218,5 +217,71 @@ export default {
                 background: '#ffbdd3'
             }
         },
+        leftPanel: {
+            telephone: {
+                style: {
+                    left: '270px',
+                    top: '250px'
+                },
+                title: {
+                    text: 'Введите адрес доставки',
+                    style: {
+                        color: '#000000',
+                        fontSize: '25px'
+                    }
+                },
+                input: {
+                    placeholder: 'телефон',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '50px',
+                        width: '390px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            }
+        },
+        rightPanel: {
+            style: {
+                background: '#ffb112'
+            },
+            textContainer: {
+                order: {
+                    style: {
+                        color: '#000fff',
+                        fontSize: '18px'
+                    }
+                },
+                delivery: {
+                    style: {
+                        color: '#000fff',
+                        fontSize: '18px'
+                    }
+                },
+                result: {
+                    style: {
+                        color: '#000fff',
+                        fontSize: '21px'
+                    }
+                }
+            },
+            buttonOK: {
+                text: 'Принять',
+                style: {
+                    background: '#97c62b',
+                    color: '#000533',
+                    height: '40px',
+                    width: '200px',
+                    borderRadius: '5px',
+                    left: '45px',
+                    top: '190px',
+                    fontSize: '15px',
+                    borderWidth: '0px'
+                }
+            }
+        }
     },
 }
