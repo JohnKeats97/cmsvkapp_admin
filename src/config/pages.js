@@ -220,14 +220,14 @@ export default {
         leftPanel: {
             telephone: {
                 style: {
-                    left: '270px',
-                    top: '250px'
+                    left: '70px',
+                    top: '50px'
                 },
                 title: {
-                    text: 'Введите адрес доставки',
+                    text: 'Телефон',
                     style: {
                         color: '#000000',
-                        fontSize: '25px'
+                        fontSize: '20px'
                     }
                 },
                 input: {

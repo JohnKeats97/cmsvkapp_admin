@@ -3,6 +3,31 @@ export default {
     background: {
         background: 'payPage.background.style.background'
     },
+    leftPanel: {
+        telephone: {
+            left: 'payPage.leftPanel.telephone.style.left',
+            top: 'payPage.leftPanel.telephone.style.top',
+            title: {
+                text: 'payPage.leftPanel.telephone.title.text',
+                color: 'payPage.leftPanel.telephone.title.style.color',
+                top: 'payPage.leftPanel.telephone.title.style.top',
+                left: 'payPage.leftPanel.telephone.title.style.left',
+                fontSize: 'payPage.leftPanel.telephone.title.style.fontSize'
+            },
+            input: {
+                placeholder: 'payPage.leftPanel.telephone.input.placeholder',
+                height: 'payPage.leftPanel.telephone.input.style.height',
+                width: 'payPage.leftPanel.telephone.input.style.width',
+                background: 'payPage.leftPanel.telephone.input.style.background',
+                borderRadius: 'payPage.leftPanel.telephone.input.style.borderRadius',
+                color: 'payPage.leftPanel.telephone.input.style.color',
+                top: 'payPage.leftPanel.telephone.input.style.top',
+                left: 'payPage.leftPanel.telephone.input.style.left',
+                fontSize: 'payPage.leftPanel.telephone.input.style.fontSize',
+                borderWidth: 'payPage.leftPanel.telephone.input.style.borderWidth'
+            }
+        }
+    },
     rightPanel: {
         background: 'payPage.rightPanel.style.background',
         textContainer: {

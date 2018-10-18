@@ -22,6 +22,107 @@ export default (props) => {
 
         <div style={props.hrStyle}/>
 
+        Телефон
+
+        <NumberChanger
+            title="Position left:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.left}
+            data={props.pageConfig.leftPanel.telephone.style.left}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Position top:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.top}
+            data={props.pageConfig.leftPanel.telephone.style.top}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Заголовок (телефон)
+
+        <TextChanger
+            title="Title text:"
+            pathConfig={PayPageConfig.leftPanel.telephone.title.text}
+            data={props.pageConfig.leftPanel.telephone.title.text}
+            onChange={props.onChange}
+        />
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={PayPageConfig.leftPanel.telephone.title.color}
+            data={props.pageConfig.leftPanel.telephone.title.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.title.fontSize}
+            data={props.pageConfig.leftPanel.telephone.title.style.fontSize}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Поле ввода (телефон)
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={PayPageConfig.leftPanel.telephone.input.background}
+            data={props.pageConfig.leftPanel.telephone.input.style.background}
+            onChange={props.onChange}
+        />
+        <TextChanger
+            title="Placeholder:"
+            pathConfig={PayPageConfig.leftPanel.telephone.input.placeholder}
+            data={props.pageConfig.leftPanel.telephone.input.placeholder}
+            onChange={props.onChange}
+        />
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={PayPageConfig.leftPanel.telephone.input.color}
+            data={props.pageConfig.leftPanel.telephone.input.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.input.fontSize}
+            data={props.pageConfig.leftPanel.telephone.input.style.fontSize}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Input border radius:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.input.borderRadius}
+            data={props.pageConfig.leftPanel.telephone.input.style.borderRadius}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Input border width:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.input.borderWidth}
+            data={props.pageConfig.leftPanel.telephone.input.style.borderWidth}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Input width:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.input.width}
+            data={props.pageConfig.leftPanel.telephone.input.style.width}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Input height:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.telephone.input.height}
+            data={props.pageConfig.leftPanel.telephone.input.style.height}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
         Карточка оплаты
 
         <BackgroundChanger
