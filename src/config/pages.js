@@ -218,10 +218,19 @@ export default {
             }
         },
         leftPanel: {
+            title: {
+                text: 'Доставка',
+                style: {
+                    color: '#000000',
+                    fontSize: '25px',
+                    left: '70px',
+                    top: '40px',
+                }
+            },
             telephone: {
                 style: {
                     left: '70px',
-                    top: '50px'
+                    top: '90px'
                 },
                 title: {
                     text: 'Телефон',
@@ -235,8 +244,151 @@ export default {
                     style: {
                         background: '#ffffff',
                         color: '#000000',
-                        height: '50px',
-                        width: '390px',
+                        height: '40px',
+                        width: '420px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            },
+            address: {
+                text: 'Москва, 4-й Добрынинский переулок, 8',
+                style: {
+                    color: '#000000',
+                    fontSize: '22px',
+                    left: '70px',
+                    top: '210px',
+                }
+            },
+            entrance: {
+                style: {
+                    left: '70px',
+                    top: '275px'
+                },
+                title: {
+                    text: 'Подъезд',
+                    style: {
+                        color: '#000000',
+                        fontSize: '17px'
+                    }
+                },
+                input: {
+                    placeholder: 'подъезд',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '40px',
+                        width: '190px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            },
+            intercom: {
+                style: {
+                    left: '300px',
+                    top: '275px'
+                },
+                title: {
+                    text: 'Домофон',
+                    style: {
+                        color: '#000000',
+                        fontSize: '17px'
+                    }
+                },
+                input: {
+                    placeholder: 'код домофона',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '40px',
+                        width: '190px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            },
+            apartment: {
+                style: {
+                    left: '70px',
+                    top: '390px'
+                },
+                title: {
+                    text: 'Кв/Офис',
+                    style: {
+                        color: '#000000',
+                        fontSize: '17px'
+                    }
+                },
+                input: {
+                    placeholder: 'квартра или офис',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '40px',
+                        width: '190px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            },
+            floor: {
+                style: {
+                    left: '300px',
+                    top: '390px'
+                },
+                title: {
+                    text: 'Этаж',
+                    style: {
+                        color: '#000000',
+                        fontSize: '17px'
+                    }
+                },
+                input: {
+                    placeholder: 'этаж',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '40px',
+                        width: '190px',
+                        borderRadius: '10px',
+                        fontSize: '15px',
+                        borderWidth: '1px'
+                    }
+                }
+            },
+            pay: {
+                text: 'Оплата',
+                style: {
+                    color: '#000000',
+                    fontSize: '22px',
+                    left: '70px',
+                    top: '490px',
+                }
+            },
+            comment: {
+                style: {
+                    left: '70px',
+                    top: '590px'
+                },
+                title: {
+                    text: 'Комментарии к заказу',
+                    style: {
+                        color: '#000000',
+                        fontSize: '20px'
+                    }
+                },
+                input: {
+                    placeholder: 'комментрарии к заказу',
+                    style: {
+                        background: '#ffffff',
+                        color: '#000000',
+                        height: '80px',
+                        width: '420px',
                         borderRadius: '10px',
                         fontSize: '15px',
                         borderWidth: '1px'

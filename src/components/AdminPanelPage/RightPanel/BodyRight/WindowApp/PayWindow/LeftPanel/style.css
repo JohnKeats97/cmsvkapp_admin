@@ -2,4 +2,11 @@
     height: 100%;
     display: block;
     position: absolute;
+    overflow-y: auto;
+    width: 560px;
+}
+
+.components-RightPanel-BodyRight-WindowApp-PayWindow-LeftPanel-text {
+    display: block;
+    position: absolute;
 }
