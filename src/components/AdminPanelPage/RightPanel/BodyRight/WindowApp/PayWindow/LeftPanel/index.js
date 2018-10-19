@@ -43,6 +43,9 @@ export default (props) => {
         >
             {props.config.pay.text}
         </div>
+
+
+
         <InputContainer
             config={props.config.comment}
         />

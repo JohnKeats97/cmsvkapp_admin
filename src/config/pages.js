@@ -81,6 +81,23 @@ export default {
                 background: '#ffbdd3'
             }
         },
+        title: {
+            style: {
+                color: '#000000',
+                fontSize: '20px'
+            }
+        },
+        buttonOk: {
+            text: 'Заказать',
+            style: {
+                background: '#9ccd2d',
+                color: '#ffffff',
+                width: '100px',
+                borderRadius: '2px',
+                fontSize: '15px',
+                borderWidth: '1px'
+            }
+        }
     },
     productPage: {
         namePage: 'Страница блюда',
