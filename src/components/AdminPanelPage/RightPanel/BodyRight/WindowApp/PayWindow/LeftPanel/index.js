@@ -41,7 +41,7 @@ export default (props) => {
             className="components-RightPanel-BodyRight-WindowApp-PayWindow-LeftPanel-text"
             style={props.config.pay.style}
         >
-            {props.config.pay.text}
+            Оплата: наличными
         </div>
 
 

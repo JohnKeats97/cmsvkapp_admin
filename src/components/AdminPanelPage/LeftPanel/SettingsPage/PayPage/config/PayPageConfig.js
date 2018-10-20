@@ -18,6 +18,12 @@ export default {
             left: 'payPage.leftPanel.address.style.left',
             fontSize: 'payPage.leftPanel.address.style.fontSize'
         },
+        pay: {
+            color: 'payPage.leftPanel.pay.style.color',
+            top: 'payPage.leftPanel.pay.style.top',
+            left: 'payPage.leftPanel.pay.style.left',
+            fontSize: 'payPage.leftPanel.pay.style.fontSize'
+        },
         telephone: {
             left: 'payPage.leftPanel.telephone.style.left',
             top: 'payPage.leftPanel.telephone.style.top',

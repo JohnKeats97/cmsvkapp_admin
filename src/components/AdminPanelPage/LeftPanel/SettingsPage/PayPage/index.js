@@ -604,6 +604,38 @@ export default (props) => {
 
         <div style={props.hrStyle}/>
 
+        Оплата
+
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={PayPageConfig.leftPanel.pay.color}
+            data={props.pageConfig.leftPanel.pay.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.pay.fontSize}
+            data={props.pageConfig.leftPanel.pay.style.fontSize}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Position left:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.pay.left}
+            data={props.pageConfig.leftPanel.pay.style.left}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Position top:"
+            minValue={0}
+            pathConfig={PayPageConfig.leftPanel.pay.top}
+            data={props.pageConfig.leftPanel.pay.style.top}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
         Комментарий к заказу
 
         <NumberChanger

@@ -241,13 +241,13 @@ export default {
                     color: '#000000',
                     fontSize: '25px',
                     left: '70px',
-                    top: '40px',
+                    top: '20px',
                 }
             },
             telephone: {
                 style: {
                     left: '70px',
-                    top: '90px'
+                    top: '70px'
                 },
                 title: {
                     text: 'Телефон',
@@ -275,13 +275,13 @@ export default {
                     color: '#000000',
                     fontSize: '22px',
                     left: '70px',
-                    top: '210px',
+                    top: '190px',
                 }
             },
             entrance: {
                 style: {
                     left: '70px',
-                    top: '275px'
+                    top: '255px'
                 },
                 title: {
                     text: 'Подъезд',
@@ -306,7 +306,7 @@ export default {
             intercom: {
                 style: {
                     left: '300px',
-                    top: '275px'
+                    top: '255px'
                 },
                 title: {
                     text: 'Домофон',
@@ -331,7 +331,7 @@ export default {
             apartment: {
                 style: {
                     left: '70px',
-                    top: '390px'
+                    top: '370px'
                 },
                 title: {
                     text: 'Кв/Офис',
@@ -356,7 +356,7 @@ export default {
             floor: {
                 style: {
                     left: '300px',
-                    top: '390px'
+                    top: '370px'
                 },
                 title: {
                     text: 'Этаж',
@@ -379,18 +379,17 @@ export default {
                 }
             },
             pay: {
-                text: 'Оплата',
                 style: {
                     color: '#000000',
                     fontSize: '22px',
                     left: '70px',
-                    top: '490px',
+                    top: '467px',
                 }
             },
             comment: {
                 style: {
                     left: '70px',
-                    top: '590px'
+                    top: '520px'
                 },
                 title: {
                     text: 'Комментарии к заказу',
