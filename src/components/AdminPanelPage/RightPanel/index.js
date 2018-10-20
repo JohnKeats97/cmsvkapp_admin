@@ -9,7 +9,7 @@ import './style.css';
 
 export default (props) => {
     return <div
-        className={cn('components-RightPanel-root', 'col-xs-9')}
+        className={cn('components-RightPanel-root')}
     >
         <HeaderRigth onChangePage={props.onChangePage}/>
         <BodyRigth page={props.page} pageConfig={props.pageConfig}/>
