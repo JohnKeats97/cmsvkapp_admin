@@ -23,6 +23,62 @@ export default (props) => {
 
         <div style={props.hrStyle}/>
 
+        Верхняя панель
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={PayPageConfig.header.background}
+            data={props.pageConfig.header.style.background}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Кнопка назад (верхняя панель)
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={PayPageConfig.header.buttonback.background}
+            data={props.pageConfig.header.buttonback.style.background}
+            onChange={props.onChange}
+        />
+        <TextChanger
+            title="Text:"
+            pathConfig={PayPageConfig.header.buttonback.text}
+            data={props.pageConfig.header.buttonback.text}
+            onChange={props.onChange}
+        />
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={PayPageConfig.header.buttonback.color}
+            data={props.pageConfig.header.buttonback.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Width:"
+            minValue={0}
+            maxValue={300}
+            pathConfig={PayPageConfig.header.buttonback.width}
+            data={props.pageConfig.header.buttonback.style.width}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Border radius:"
+            minValue={0}
+            pathConfig={PayPageConfig.header.buttonback.borderRadius}
+            data={props.pageConfig.header.buttonback.style.borderRadius}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Border width:"
+            minValue={0}
+            pathConfig={PayPageConfig.header.buttonback.borderWidth}
+            data={props.pageConfig.header.buttonback.style.borderWidth}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
         Заголовок
 
         <TextChanger

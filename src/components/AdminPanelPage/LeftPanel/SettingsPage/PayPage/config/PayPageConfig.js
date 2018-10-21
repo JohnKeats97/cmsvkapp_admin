@@ -3,6 +3,17 @@ export default {
     background: {
         background: 'payPage.background.style.background'
     },
+    header: {
+        background: 'payPage.header.style.background',
+        buttonback: {
+            text: 'payPage.header.buttonback.text',
+            color: 'payPage.header.buttonback.style.color',
+            width: 'payPage.header.buttonback.style.width',
+            background: 'payPage.header.buttonback.style.background',
+            borderRadius: 'payPage.header.buttonback.style.borderRadius',
+            borderWidth: 'payPage.header.buttonback.style.borderWidth'
+        }
+    },
     leftPanel: {
         title: {
             text: 'payPage.leftPanel.title.text',

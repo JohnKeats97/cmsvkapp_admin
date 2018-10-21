@@ -1,14 +1,14 @@
 import React from 'react'
 
 import BackgroundChanger from '../common/BackgroundChanger/index'
-import SizeChanger from '../common/NumberChanger/index'
 import MenuPageConfig from './config/MenuPageConfig'
+import TextChanger from "../common/TextChanger";
+import NumberChanger from "../common/NumberChanger";
+
 import cn from '../../../../../utils/cn'
 
 import './style.css';
-import AddressPageConfig from "../AddressPage/config/AddressPageConfig";
-import TextChanger from "../common/TextChanger";
-import NumberChanger from "../common/NumberChanger";
+
 
 export default (props) => {
     return <div className={cn('components-LeftPanel-SettingPage-MenuPage-root', props.className)}>
@@ -17,6 +17,111 @@ export default (props) => {
             title="Background:"
             pathConfig={MenuPageConfig.background.background}
             data={props.pageConfig.background.style.background}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Верхняя панель
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={MenuPageConfig.header.background}
+            data={props.pageConfig.header.style.background}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Кнопка назад (верхняя панель)
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={MenuPageConfig.header.buttonback.background}
+            data={props.pageConfig.header.buttonback.style.background}
+            onChange={props.onChange}
+        />
+        <TextChanger
+            title="Text:"
+            pathConfig={MenuPageConfig.header.buttonback.text}
+            data={props.pageConfig.header.buttonback.text}
+            onChange={props.onChange}
+        />
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={MenuPageConfig.header.buttonback.color}
+            data={props.pageConfig.header.buttonback.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Border radius:"
+            minValue={0}
+            pathConfig={MenuPageConfig.header.buttonback.borderRadius}
+            data={props.pageConfig.header.buttonback.style.borderRadius}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Border width:"
+            minValue={0}
+            pathConfig={MenuPageConfig.header.buttonback.borderWidth}
+            data={props.pageConfig.header.buttonback.style.borderWidth}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={MenuPageConfig.header.buttonback.fontSize}
+            data={props.pageConfig.header.buttonback.style.fontSize}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Адресс (верхняя панель)
+
+        <BackgroundChanger
+        title="Text color:"
+        pathConfig={MenuPageConfig.header.address.color}
+        data={props.pageConfig.header.address.style.color}
+        onChange={props.onChange}
+    />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={MenuPageConfig.header.address.fontSize}
+            data={props.pageConfig.header.address.style.fontSize}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Position top:"
+            minValue={0}
+            maxValue={30}
+            pathConfig={MenuPageConfig.header.address.top}
+            data={props.pageConfig.header.address.style.top}
+            onChange={props.onChange}
+        />
+
+        <div style={props.hrStyle}/>
+
+        Корзина (верхняя панель)
+
+        <BackgroundChanger
+            title="Background:"
+            pathConfig={MenuPageConfig.header.basket.background}
+            data={props.pageConfig.header.basket.style.background}
+            onChange={props.onChange}
+        />
+        <BackgroundChanger
+            title="Text color:"
+            pathConfig={MenuPageConfig.header.basket.color}
+            data={props.pageConfig.header.basket.style.color}
+            onChange={props.onChange}
+        />
+        <NumberChanger
+            title="Font size:"
+            minValue={0}
+            pathConfig={MenuPageConfig.header.basket.fontSize}
+            data={props.pageConfig.header.basket.style.fontSize}
             onChange={props.onChange}
         />
 

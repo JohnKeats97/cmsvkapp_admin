@@ -13,7 +13,10 @@ export default class HeaderRight extends React.Component {
     }
 
     onClick() {
-        Fetch.Post('https://ec2-18-218-171-0.us-east-2.compute.amazonaws.com/deploy', {"idApp": "test"});
+        Fetch.Get('http://cmsvkapp.herokuapp.com/api/apps/test/deploy')
+            .then((res)=>{
+                alert(res + '/test')
+            });
     };
 
     onChangePage() {

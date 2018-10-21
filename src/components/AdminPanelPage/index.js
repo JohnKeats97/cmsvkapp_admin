@@ -18,7 +18,7 @@ export default class AdminPanel extends React.Component {
             page: 'menuPage'
         };
 
-        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
+        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', this.state.pageConfig);
 
         // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
         //     .then(response => {
