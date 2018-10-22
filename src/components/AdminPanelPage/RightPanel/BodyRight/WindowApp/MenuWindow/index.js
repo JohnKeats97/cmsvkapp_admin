@@ -1,7 +1,8 @@
 import React from 'react'
 
-import './style.css';
 import Header from './Header';
+
+import './style.css';
 
 
 export default (props) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LeftPanel from './LeftPanel';
-import RightPanet from './RightPanel';
+import RightPanel from './RightPanel';
 import Header from './Header';
 
 import './style.css';
@@ -14,7 +14,7 @@ export default (props) => {
 
         <Header config={props.pageConfig.header} />
         <LeftPanel config={props.pageConfig.leftPanel}/>
-        <RightPanet config={props.pageConfig.rightPanel}/>
+        <RightPanel config={props.pageConfig.rightPanel}/>
 
     </div>
 };
