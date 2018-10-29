@@ -1,6 +1,7 @@
 import React from "react";
 
 import configPage from "../config/configPage";
+import Fetch from "../../utils/fetch";
 
 import './style.css';
 
@@ -9,47 +10,45 @@ export default class RegisterPage extends React.Component {
 
     constructor() {
         super();
-        // this.state = {
-        //     pageConfig: pageConfig,
-        //     page: 'basketPage'
-        // };
     }
-    //
-    //     Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
-    //
-    //     // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-    //     //     .then(response => {
-    //     //         if (response) {
-    //     //             this.setState((state)=>{
-    //     //                 state.pageConfig = response;
-    //     //                 return state;
-    //     //             });
-    //     //         }
-    //     //     });
-    // }
-    //
-    // onChange (args) {
-    //     this.setState((state)=>{
-    //         state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-    //         Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
-    //         return state;
-    //     });
-    // }
-    //
-    // onClickItemListPages (page) {
-    //     this.setState((state)=>(state.page = page, state));
-    // }
 
     onLoginClick() {
         this.props.onChangePage(configPage.loginPage);
     }
 
     onRegisterClick() {
-        this.props.onChangePage(configPage.adminPanelPage);
+        const email = document.querySelector('.RegisterPage-inputEMail').value;
+        const login = document.querySelector('.RegisterPage-inputLogin').value;
+        const password = document.querySelector('.RegisterPage-inputPassword').value;
+        const address = 'https://cmsvkapp.herokuapp.com/api';
+        Fetch.Post(`${address}/users`, {email : email, login: login, password : password})
+            .then((res) => {
+                console.log(res)
+                // const appName = login;
+                // Fetch.Post(`${address}/apps`, {appName : appName, creatorLogin: login, serviceId : 16277})
+                //     .then((res) => {
+                //         console.log(res);
+                        // добавилась прилажка
+                    //     Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
+                    //         .then((res) => {
+                    //             console.log(res);
+                    //             // setTimeout(()=> {
+                    //             //     Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/info')
+                    //             //         .then((res) => {
+                    //             //             console.warn(res);
+                    //             //         })
+                    //             // }, 3000)
+                    //             // изменять в state App пользователя
+                    //         })
+                    //
+                    // // })
+            })
+            .catch(() => {
+                alert('Этот пользователь уже зарегестрирован')
+            })
     }
 
     render () {
-        const {state} = this;
         return <div className="RegisterPage-root">
             <div className="container">
                 <div className="form-signin" role="form">

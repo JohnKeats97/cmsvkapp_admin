@@ -3,6 +3,7 @@ import React from "react";
 import configPage from "../config/configPage";
 
 import './style.css';
+import Fetch from "../../utils/fetch";
 
 
 export default class LoginPage extends React.Component {
@@ -40,7 +41,16 @@ export default class LoginPage extends React.Component {
     // }
 
     onLoginClick() {
-        this.props.onChangePage(configPage.adminPanelPage);
+        const email = document.querySelector('.LoginPage-inputEMail').value;
+        const password = document.querySelector('.LoginPage-inputPassword').value;
+        const address = 'https://cmsvkapp.herokuapp.com/api';
+        Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
+            .then((res) => {
+                this.props.onChangeUser(res);
+            })
+            .catch((err) => {
+                alert("Неверный email или пароль");
+            })
     }
 
     onRegisterClick() {
