@@ -15,7 +15,7 @@ export default class Background extends React.Component {
         super();
         this.state = {
             pageConfig: pageConfig,
-            page: 'basketPage'
+            page: 'manuPage'
         };
 
         Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
