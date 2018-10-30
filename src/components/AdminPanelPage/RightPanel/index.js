@@ -11,7 +11,7 @@ export default (props) => {
     return <div
         className='components-RightPanel-root'
     >
-        <HeaderRigth onChangePage={props.onChangePage}/>
+        <HeaderRigth appName={props.appName} onChangePage={props.onChangePage}/>
         <BodyRigth page={props.page} pageConfig={props.pageConfig}/>
     </div>
 };

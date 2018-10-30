@@ -2,7 +2,6 @@ import React from 'react'
 
 import LeftPanel from './LeftPanel'
 import RightPanel from './RightPanel'
-import pageConfig from '../../config/pages'
 import {SetObjectValue} from '../../utils/GetSetObjectValue'
 import Fetch from '../../utils/fetch'
 
@@ -14,25 +13,9 @@ export default class AdminPanel extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            pageConfig: pageConfig,
-            page: 'menuPage'
+            pageConfig: props.pageConfig,
+            page: 'addressPage'
         };
-
-        // Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', this.state.pageConfig);
-
-        // перенести в окно загрузки
-        Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${props.appName}/config`)
-            .then(response => {
-                if (response) {
-                    this.setState((state)=>{
-                        state.pageConfig = response;
-                        return state;
-                    });
-                }
-            })
-            .catch((err) => {
-                alert('Ошибка получения конфига приложения')
-            })
     }
 
     onChange (args) {
@@ -57,6 +40,7 @@ export default class AdminPanel extends React.Component {
                 onClick={this.onClickItemListPages.bind(this)}
             />
             <RightPanel
+                appName={this.props.appName}
                 onChangePage={this.props.onChangePage}
                 pageConfig={state.pageConfig}
                 page={state.page}

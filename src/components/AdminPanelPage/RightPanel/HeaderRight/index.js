@@ -13,9 +13,13 @@ export default class HeaderRight extends React.Component {
     }
 
     onClickDeploy() {
-        Fetch.Get('http://cmsvkapp.herokuapp.com/api/apps/test/deploy')
+        Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${this.props.appName}/deploy`)
             .then((res)=>{
-                alert(res + '/test')
+                console.log(res);
+                alert(res.url)
+            })
+            .catch(() => {
+                alert('Ошибка деплоя')
             });
     };
 
@@ -32,7 +36,7 @@ export default class HeaderRight extends React.Component {
     render () {
         return <div className="components-RightPanel-HeaderRight-root">
             <div className="col-xs-8"/>
-            <button className="components-RightPanel-HeaderRight-button" onClick={this.onClickDeploy}>deploy</button>
+            <button className="components-RightPanel-HeaderRight-button" onClick={this.onClickDeploy.bind(this)}>deploy</button>
             <button
                 className="components-RightPanel-HeaderRight-button"
                 onClick={this.onChangePage.bind(this)}

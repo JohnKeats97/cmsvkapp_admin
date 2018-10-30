@@ -13,7 +13,17 @@ export default class RegisterPage extends React.Component {
 
     render () {
         return <div className="LoadingPage-root">
-
+            <main role="main">
+                <ul role="progressbar" aria-busy="true">
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                    <li role="presentation"></li>
+                </ul>
+            </main>
         </div>
     }
 };

@@ -6,6 +6,7 @@ import LoadingPage from './LoadingPage'
 import RegisterPage from './RegisterPage'
 import Fetch from '../utils/fetch'
 import configPage from "./config/configPage";
+import pageConfig from '../config/pages'
 import cn from '../utils/cn'
 
 import './style.css';
@@ -16,9 +17,10 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            page: 'loginPage',
+            page: 'loadingPage',
             appName: '',
-            user: {}
+            user: {},
+            pageConfig: pageConfig
         };
     }
     //
@@ -64,11 +66,26 @@ export default class App extends React.Component {
                     return;
                 }
 
-                this.setState((state)=>{
-                    state.appName = res.login;
-                    state.page = configPage.adminPanelPage;
-                    return state
-                });
+                Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${res.login}/config`)
+                    .then(response => {
+                        if(response.status === 9) {
+                            this.setState((state)=>{
+                                state.appName = res.login;
+                                state.page = configPage.adminPanelPage;
+                                return state
+                            });
+                            return;
+                        }
+                        this.setState((state)=>{
+                            state.pageConfig = response;
+                            state.appName = res.login;
+                            state.page = configPage.adminPanelPage;
+                            return state
+                        });
+                    })
+                    .catch(() => {
+                        alert('Ошибка получения конфига приложения');
+                    })
             })
     }
 
@@ -101,6 +118,7 @@ export default class App extends React.Component {
             {state.page === configPage.adminPanelPage && <AdminPanel
                 onChangePage={this.onChangePage.bind(this)}
                 appName={state.appName}
+                pageConfig={state.pageConfig}
             />}
             <LoginPage
                 onChangePage={this.onChangePage.bind(this)}
