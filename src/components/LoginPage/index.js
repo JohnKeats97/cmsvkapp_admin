@@ -48,7 +48,7 @@ export default class LoginPage extends React.Component {
             .then((res) => {
                 this.props.onChangeUser(res);
             })
-            .catch((err) => {
+            .catch(() => {
                 alert("Неверный email или пароль");
             })
     }

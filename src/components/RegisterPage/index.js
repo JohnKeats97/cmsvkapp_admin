@@ -22,26 +22,18 @@ export default class RegisterPage extends React.Component {
         const password = document.querySelector('.RegisterPage-inputPassword').value;
         const address = 'https://cmsvkapp.herokuapp.com/api';
         Fetch.Post(`${address}/users`, {email : email, login: login, password : password})
-            .then((res) => {
-                console.log(res)
-                // const appName = login;
-                // Fetch.Post(`${address}/apps`, {appName : appName, creatorLogin: login, serviceId : 16277})
-                //     .then((res) => {
-                //         console.log(res);
-                        // добавилась прилажка
-                    //     Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
-                    //         .then((res) => {
-                    //             console.log(res);
-                    //             // setTimeout(()=> {
-                    //             //     Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/info')
-                    //             //         .then((res) => {
-                    //             //             console.warn(res);
-                    //             //         })
-                    //             // }, 3000)
-                    //             // изменять в state App пользователя
-                    //         })
-                    //
-                    // // })
+            .then(() => {
+                const appName = login;
+                Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
+                    .then((user) => {
+                        Fetch.Post(`${address}/apps`, {appName : appName, creatorLogin: login, serviceId : 16277})
+                            .then(() => {
+                                this.props.onChangeUserAndApp(user, appName);
+                            })
+                            .catch(() => {
+                                alert('ошибка создания приложения')
+                            })
+                    })
             })
             .catch(() => {
                 alert('Этот пользователь уже зарегестрирован')

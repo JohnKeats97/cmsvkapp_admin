@@ -12,7 +12,7 @@ export default class HeaderRight extends React.Component {
         super();
     }
 
-    onClick() {
+    onClickDeploy() {
         Fetch.Get('http://cmsvkapp.herokuapp.com/api/apps/test/deploy')
             .then((res)=>{
                 alert(res + '/test')
@@ -20,13 +20,19 @@ export default class HeaderRight extends React.Component {
     };
 
     onChangePage() {
-        this.props.onChangePage(configPage.loginPage)
+        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout')
+            .then(()=>{
+                this.props.onChangePage(configPage.loginPage)
+            })
+            .catch(() => {
+                alert('Ошибка выхода')
+            })
     };
 
     render () {
         return <div className="components-RightPanel-HeaderRight-root">
             <div className="col-xs-8"/>
-            <button className="components-RightPanel-HeaderRight-button" onClick={this.onClick}>deploy</button>
+            <button className="components-RightPanel-HeaderRight-button" onClick={this.onClickDeploy}>deploy</button>
             <button
                 className="components-RightPanel-HeaderRight-button"
                 onClick={this.onChangePage.bind(this)}

@@ -16,7 +16,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            page: 'loadingPage',
+            page: 'loginPage',
             appName: '',
             user: {}
         };
@@ -50,27 +50,42 @@ export default class App extends React.Component {
         }
         Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/info')
             .then((res) => {
-                console.warn(res);
                 if (res.status === 0) {
                     const {length: loginLength} = document.querySelectorAll('.root.loginPage');
                     const {length: registerLength} = document.querySelectorAll('.root.registerPage');
                     if (loginLength || registerLength) {
                         return;
                     }
-                    this.onChangePage('loginPage');
+                    this.setState((state) => {
+                        state.page = configPage.loginPage;
+                        state.user = {};
+                        return state;
+                    });
                     return;
                 }
 
-
-                // брать прилажки польхователя, брать первую (пока нет экрана выбора) и записывать ее в state и сразу изменять в state страницу на админсую
-                this.setState((state)=>(state.appName = 'test', state));
-
-                // this.onChangePage('adminPanelPage');
+                this.setState((state)=>{
+                    state.appName = res.login;
+                    state.page = configPage.adminPanelPage;
+                    return state
+                });
             })
+    }
+
+    onChangeApp(appName) {
+        this.setState((state)=>(state.appName = appName, state));
     }
 
     onChangeUser(newUser) {
         this.setState((state)=>(state.user = newUser, state));
+    }
+
+    onChangeUserAndApp(newUser, appName) {
+        this.setState((state) => {
+            state.user = newUser;
+            state.appName = appName;
+            return state
+        });
     }
 
     onChangePage(newPage) {
@@ -80,12 +95,22 @@ export default class App extends React.Component {
     render () {
         const {state} = this;
 
-        this.isLogin();
+        setTimeout(() => {this.isLogin()}, 0);
 
         return <div className={cn('root', state.page)}>
-            {state.page === configPage.adminPanelPage && <AdminPanel onChangePage={this.onChangePage.bind(this)}/>}
-            <LoginPage onChangePage={this.onChangePage.bind(this)} onChangeUser={this.onChangeUser.bind(this)}/>
-            <RegisterPage onChangePage={this.onChangePage.bind(this)} onChangeUser={this.onChangeUser.bind(this)}/>
+            {state.page === configPage.adminPanelPage && <AdminPanel
+                onChangePage={this.onChangePage.bind(this)}
+                appName={state.appName}
+            />}
+            <LoginPage
+                onChangePage={this.onChangePage.bind(this)}
+                onChangeUser={this.onChangeUser.bind(this)}
+            />
+            <RegisterPage
+                onChangePage={this.onChangePage.bind(this)}
+                onChangeUser={this.onChangeUser.bind(this)}
+                onChangeUserAndApp={this.onChangeUserAndApp.bind(this)}
+            />
             <LoadingPage />
         </div>
     }

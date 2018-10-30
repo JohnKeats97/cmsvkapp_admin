@@ -18,6 +18,7 @@ export default class Fetch
             {
                 method: 'GET',
                 mode: 'cors',
+                credentials: 'include'
             })
             .then(function (response)
             {
@@ -40,6 +41,7 @@ export default class Fetch
             {
                 method: 'POST',
                 mode: 'cors',
+                credentials: 'include',
                 body: JSON.stringify(body),
                 headers:
                     {

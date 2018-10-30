@@ -11,7 +11,7 @@ import './style.css';
 
 export default class AdminPanel extends React.Component {
 
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
             pageConfig: pageConfig,
@@ -20,21 +20,25 @@ export default class AdminPanel extends React.Component {
 
         // Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', this.state.pageConfig);
 
-        // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-        //     .then(response => {
-        //         if (response) {
-        //             this.setState((state)=>{
-        //                 state.pageConfig = response;
-        //                 return state;
-        //             });
-        //         }
-        //     });
+        // перенести в окно загрузки
+        Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${props.appName}/config`)
+            .then(response => {
+                if (response) {
+                    this.setState((state)=>{
+                        state.pageConfig = response;
+                        return state;
+                    });
+                }
+            })
+            .catch((err) => {
+                alert('Ошибка получения конфига приложения')
+            })
     }
 
     onChange (args) {
         this.setState((state)=>{
             state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
+            Fetch.Post(`https://cmsvkapp.herokuapp.com/api/apps/${this.props.appName}/config`, state.pageConfig);
             return state;
         });
     }
