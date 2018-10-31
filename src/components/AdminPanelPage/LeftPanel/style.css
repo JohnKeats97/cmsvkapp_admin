@@ -1,0 +1,12 @@
+.components-LeftPanel-root {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    padding-left: 15px;
+}
+
+.components-LeftPanel-fixed {
+    position: fixed;
+    z-index: 2;
+    width: 360px;
+}

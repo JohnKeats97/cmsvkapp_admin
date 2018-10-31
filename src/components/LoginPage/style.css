@@ -1,0 +1,72 @@
+.LoginPage-root {
+    position: relative;
+    display: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.loginPage .LoginPage-root {
+    display: block;
+}
+
+.LoginPage-heading {
+    font-size: 25px;
+}
+
+.LoginPage-input {
+    border-radius: 6px;
+}
+
+.LoginPage-button {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    border-radius: 8px;
+}
+
+.LoginPage-buttonSignIn {
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.LoginPage-buttonSignUp {
+    background-color: #6c92af;
+    border-color: #6c92af;
+}
+
+.LoginPage-inputPassword {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.LoginPage-inputEMail {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}

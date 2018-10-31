@@ -1,0 +1,7 @@
+.components-RightPanel-root {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    width: 75%;
+}

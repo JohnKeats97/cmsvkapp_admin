@@ -1,61 +1,114 @@
 import React from 'react'
 
-import LeftPanel from './LeftPanel'
-import RightPanel from './RightPanel'
-import pageConfig from '../config/pages'
-import {SetObjectValue} from '../utils/GetSetObjectValue'
+import AdminPanel from './AdminPanelPage'
+import LoginPage from './LoginPage'
+import LoadingPage from './LoadingPage'
+import RegisterPage from './RegisterPage'
 import Fetch from '../utils/fetch'
+import configPage from "./config/configPage";
+import pageConfig from '../config/pages'
+import cn from '../utils/cn'
 
 import './style.css';
 
 
-export default class Background extends React.Component {
+export default class App extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            pageConfig: pageConfig,
-            page: 'manuPage'
+            page: 'loadingPage',
+            appName: '',
+            user: {},
+            pageConfig: pageConfig
         };
-
-        Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
-
-        // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-        //     .then(response => {
-        //         if (response) {
-        //             this.setState((state)=>{
-        //                 state.pageConfig = response;
-        //                 return state;
-        //             });
-        //         }
-        //     });
     }
 
-    onChange (args) {
-        this.setState((state)=>{
-            state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
-            return state;
+    isLogin() {
+        const {length} = document.querySelectorAll('.root.adminPanelPage');
+        if (length > 0) {
+            return;
+        }
+        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/info')
+            .then((res) => {
+                if (res.status === 0) {
+                    const {length: loginLength} = document.querySelectorAll('.root.loginPage');
+                    const {length: registerLength} = document.querySelectorAll('.root.registerPage');
+                    if (loginLength || registerLength) {
+                        return;
+                    }
+                    this.setState((state) => {
+                        state.page = configPage.loginPage;
+                        state.user = {};
+                        return state;
+                    });
+                    return;
+                }
+
+                Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${res.login}/config`)
+                    .then(response => {
+                        if(response.status === 9) {
+                            this.setState((state)=>{
+                                state.appName = res.login;
+                                state.page = configPage.adminPanelPage;
+                                return state
+                            });
+                            return;
+                        }
+                        this.setState((state)=>{
+                            state.pageConfig = response;
+                            state.appName = res.login;
+                            state.page = configPage.adminPanelPage;
+                            return state
+                        });
+                    })
+                    .catch(() => {
+                        alert('Ошибка получения конфига приложения');
+                    })
+            })
+    }
+
+    onChangeApp(appName) {
+        this.setState((state)=>(state.appName = appName, state));
+    }
+
+    onChangeUser(newUser) {
+        this.setState((state)=>(state.user = newUser, state));
+    }
+
+    onChangeUserAndApp(newUser, appName) {
+        this.setState((state) => {
+            state.user = newUser;
+            state.appName = appName;
+            return state
         });
     }
 
-    onClickItemListPages (page) {
-        this.setState((state)=>(state.page = page, state));
+    onChangePage(newPage) {
+        this.setState((state)=>(state.page = newPage, state));
     }
 
     render () {
         const {state} = this;
-        return <div className='root'>
-            <LeftPanel
+
+        setTimeout(() => {this.isLogin()}, 0);
+
+        return <div className={cn('root', state.page)}>
+            {state.page === configPage.adminPanelPage && <AdminPanel
+                onChangePage={this.onChangePage.bind(this)}
+                appName={state.appName}
                 pageConfig={state.pageConfig}
-                page={state.page}
-                onChange={this.onChange.bind(this)}
-                onClick={this.onClickItemListPages.bind(this)}
+            />}
+            <LoginPage
+                onChangePage={this.onChangePage.bind(this)}
+                onChangeUser={this.onChangeUser.bind(this)}
             />
-            <RightPanel
-                pageConfig={state.pageConfig}
-                page={state.page}
+            <RegisterPage
+                onChangePage={this.onChangePage.bind(this)}
+                onChangeUser={this.onChangeUser.bind(this)}
+                onChangeUserAndApp={this.onChangeUserAndApp.bind(this)}
             />
+            <LoadingPage />
         </div>
     }
 };
