@@ -74,6 +74,8 @@ export default class App extends React.Component {
                             //     state.page = configPage.adminPanelPage;
                             //     return state
                             // });
+                            Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout');
+                            // ???
                             alert('Конфиг приложения отсутствует на сервере');
                             return;
                         }
@@ -85,6 +87,7 @@ export default class App extends React.Component {
                         });
                     })
                     .catch(() => {
+                        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout');
                         alert('Ошибка получения конфига приложения');
                     })
             })
