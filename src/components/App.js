@@ -29,8 +29,14 @@ export default class App extends React.Component {
         if (length > 0) {
             return;
         }
-        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/info')
+        Fetch.Get('/users/info')
             .then((res) => {
+                const {length: loadingPageLR} = document.querySelectorAll('.root.loadingPageLR');
+                const {length: userLength} = Object.keys(this.state.user);
+                if (loadingPageLR && (!userLength)) {
+                    return;
+                }
+
                 if (res.status === 0) {
                     const {length: loginLength} = document.querySelectorAll('.root.loginPage');
                     const {length: registerLength} = document.querySelectorAll('.root.registerPage');
@@ -45,7 +51,7 @@ export default class App extends React.Component {
                     return;
                 }
 
-                Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${res.login}/config`)
+                Fetch.Get(`/apps/${res.login}/config`)
                     .then(response => {
                         if(response.status === 9) {
                             // this.setState((state)=>{
@@ -53,7 +59,8 @@ export default class App extends React.Component {
                             //     state.page = configPage.adminPanelPage;
                             //     return state
                             // });
-                            Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout');
+                            Fetch.Get('/users/logout');
+                            this.onChangePage(configPage.loginPage);
                             alert('Конфиг приложения отсутствует на сервере');
                             return;
                         }
@@ -65,7 +72,8 @@ export default class App extends React.Component {
                         });
                     })
                     .catch(() => {
-                        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout');
+                        Fetch.Get('/users/logout');
+                        this.onChangePage(configPage.loginPage);
                         alert('Ошибка получения конфига приложения');
                     })
             })
@@ -116,3 +124,5 @@ export default class App extends React.Component {
         </div>
     }
 };
+
+

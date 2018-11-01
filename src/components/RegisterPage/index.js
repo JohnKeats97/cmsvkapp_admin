@@ -20,29 +20,35 @@ export default class RegisterPage extends React.Component {
         const email = document.querySelector('.RegisterPage-inputEMail').value;
         const login = document.querySelector('.RegisterPage-inputLogin').value;
         const password = document.querySelector('.RegisterPage-inputPassword').value;
-        const address = 'https://cmsvkapp.herokuapp.com/api';
-        Fetch.Post(`${address}/users`, {email : email, login: login, password : password})
+        Fetch.Post('/users', {email : email, login: login, password : password})
             .then(() => {
                 const appName = login;
-                Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
+                Fetch.Post('/users/login', {loginEmail : email, password: password})
                     .then((user) => {
-                        Fetch.Post(`${address}/apps`, {
+                        Fetch.Post('/apps', {
                             appName : appName,
                             creatorLogin: login,
                             serviceId : 16277,
-                            config: this.props.pageConfig
+                            config: JSON.stringify(this.props.pageConfig)
                         })
                             .then(() => {
                                 this.props.onChangeUserAndApp(user, appName);
                             })
                             .catch(() => {
-                                alert('ошибка создания приложения')
+                                this.props.onChangePage(configPage.loginPage);
+                                alert('ошибка создания приложения');
                             })
+                    })
+                    .catch(() => {
+                        this.props.onChangePage(configPage.loginPage);
+                        alert('Ошибка входа после регистрации');
                     })
             })
             .catch(() => {
-                alert('Этот пользователь уже зарегестрирован')
-            })
+                alert('Этот пользователь уже зарегестрирован');
+                this.props.onChangePage(configPage.registerPage);
+            });
+        this.props.onChangePage(configPage.loadingPageLR);
     }
 
     render () {

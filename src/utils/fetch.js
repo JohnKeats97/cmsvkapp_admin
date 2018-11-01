@@ -4,6 +4,7 @@
  * Модуль, предоставляющий методы для выполнения HTTP-запросов
  * @module Fetch
  */
+const baseURL = 'https://cmsvkapp.herokuapp.com/api';
 
 export default class Fetch
 {
@@ -14,7 +15,7 @@ export default class Fetch
      */
     static Get(url)
     {
-        return fetch(url,
+        return fetch(baseURL + url,
             {
                 method: 'GET',
                 mode: 'cors',
@@ -37,7 +38,7 @@ export default class Fetch
      */
     static Post(url, body)
     {
-        return fetch(url,
+        return fetch(baseURL + url,
             {
                 method: 'POST',
                 mode: 'cors',

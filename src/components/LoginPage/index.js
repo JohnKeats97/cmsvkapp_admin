@@ -8,49 +8,22 @@ import Fetch from "../../utils/fetch";
 
 export default class LoginPage extends React.Component {
 
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         pageConfig: pageConfig,
-    //         page: 'basketPage'
-    //     };
-    //
-    //     Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', pageConfig);
-    //
-    //     // Fetch.Get('https://cmsvkapp.herokuapp.com/api/apps/test/config')
-    //     //     .then(response => {
-    //     //         if (response) {
-    //     //             this.setState((state)=>{
-    //     //                 state.pageConfig = response;
-    //     //                 return state;
-    //     //             });
-    //     //         }
-    //     //     });
-    // }
-    //
-    // onChange (args) {
-    //     this.setState((state)=>{
-    //         state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-    //         Fetch.Post('https://cmsvkapp.herokuapp.com/api/apps/test/config', state.pageConfig);
-    //         return state;
-    //     });
-    // }
-    //
-    // onClickItemListPages (page) {
-    //     this.setState((state)=>(state.page = page, state));
-    // }
+    constructor() {
+        super();
+    }
 
     onLoginClick() {
         const email = document.querySelector('.LoginPage-inputEMail').value;
         const password = document.querySelector('.LoginPage-inputPassword').value;
-        const address = 'https://cmsvkapp.herokuapp.com/api';
-        Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
+        Fetch.Post('/users/login', {loginEmail : email, password: password})
             .then((res) => {
                 this.props.onChangeUser(res);
             })
             .catch(() => {
+                this.props.onChangePage(configPage.loginPage);
                 alert("Неверный email или пароль");
-            })
+            });
+        this.props.onChangePage(configPage.loadingPageLR);
     }
 
     onRegisterClick() {

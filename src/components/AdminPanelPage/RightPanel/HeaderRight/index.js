@@ -13,7 +13,7 @@ export default class HeaderRight extends React.Component {
     }
 
     onClickDeploy() {
-        Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${this.props.appName}/deploy`)
+        Fetch.Get(`/apps/${this.props.appName}/deploy`)
             .then((res)=>{
                 console.log(res);
                 alert(res.url)
@@ -24,7 +24,7 @@ export default class HeaderRight extends React.Component {
     };
 
     onChangePage() {
-        Fetch.Get('https://cmsvkapp.herokuapp.com/api/users/logout')
+        Fetch.Get('/users/logout')
             .then(()=>{
                 this.props.onChangePage(configPage.loginPage)
             })

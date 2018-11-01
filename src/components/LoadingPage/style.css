@@ -17,6 +17,11 @@
     /*opacity: 100;*/
 }
 
+.loadingPageLR .LoadingPage-root {
+    display: block;
+    /*opacity: 100;*/
+}
+
 [role="progressbar"] {
     position: relative;
     padding: 0;
