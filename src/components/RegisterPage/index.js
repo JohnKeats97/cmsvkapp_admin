@@ -29,12 +29,12 @@ export default class RegisterPage extends React.Component {
                             appName : appName,
                             creatorLogin: login,
                             serviceId : 16277,
-                            config: (this.props.pageConfig).toString()
+                            config: JSON.stringify(this.props.pageConfig)
                         })
                             .then(() => {
                                 this.props.onChangeUserAndApp(user, appName);
                             })
-                            .catch(() => {
+                            .catch((err) => {
                                 this.props.onChangePage(configPage.loginPage);
                                 alert('ошибка создания приложения');
                             })
