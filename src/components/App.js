@@ -48,11 +48,12 @@ export default class App extends React.Component {
                 Fetch.Get(`https://cmsvkapp.herokuapp.com/api/apps/${res.login}/config`)
                     .then(response => {
                         if(response.status === 9) {
-                            this.setState((state)=>{
-                                state.appName = res.login;
-                                state.page = configPage.adminPanelPage;
-                                return state
-                            });
+                            // this.setState((state)=>{
+                            //     state.appName = res.login;
+                            //     state.page = configPage.adminPanelPage;
+                            //     return state
+                            // });
+                            alert('Конфиг приложения отсутствует на сервере');
                             return;
                         }
                         this.setState((state)=>{
@@ -107,6 +108,7 @@ export default class App extends React.Component {
                 onChangePage={this.onChangePage.bind(this)}
                 onChangeUser={this.onChangeUser.bind(this)}
                 onChangeUserAndApp={this.onChangeUserAndApp.bind(this)}
+                pageConfig={pageConfig}
             />
             <LoadingPage />
         </div>

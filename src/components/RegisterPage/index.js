@@ -26,7 +26,12 @@ export default class RegisterPage extends React.Component {
                 const appName = login;
                 Fetch.Post(`${address}/users/login`, {loginEmail : email, password: password})
                     .then((user) => {
-                        Fetch.Post(`${address}/apps`, {appName : appName, creatorLogin: login, serviceId : 16277})
+                        Fetch.Post(`${address}/apps`, {
+                            appName : appName,
+                            creatorLogin: login,
+                            serviceId : 16277,
+                            config: this.props.pageConfig
+                        })
                             .then(() => {
                                 this.props.onChangeUserAndApp(user, appName);
                             })
