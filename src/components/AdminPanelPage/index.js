@@ -21,7 +21,7 @@ export default class AdminPanel extends React.Component {
     onChange (args) {
         this.setState((state)=>{
             state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post(`https://cmsvkapp.herokuapp.com/api/apps/${this.props.appName}/config`, state.pageConfig);
+            Fetch.Post(`/apps/${this.props.appName}/config`, state.pageConfig);
             return state;
         });
     }
