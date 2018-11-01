@@ -34,7 +34,7 @@ export default class RegisterPage extends React.Component {
                             .then(() => {
                                 this.props.onChangeUserAndApp(user, appName);
                             })
-                            .catch((err) => {
+                            .catch(() => {
                                 this.props.onChangePage(configPage.loginPage);
                                 alert('ошибка создания приложения');
                             })
