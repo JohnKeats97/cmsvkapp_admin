@@ -4,7 +4,7 @@
  * Модуль, предоставляющий методы для выполнения HTTP-запросов
  * @module Fetch
  */
-const baseURL = 'https://cmsvkapp.herokuapp.com/api';
+const baseURL = 'http://ec2-18-218-134-117.us-east-2.compute.amazonaws.com/api';
 
 export default class Fetch
 {
