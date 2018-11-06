@@ -3,7 +3,7 @@ export default {
         namePage: 'Страница загрузки',
         background: {
             style: {
-                background: '#ffbdd2'
+                background: 'url(http://www.2fons.ru/pic/201405/1680x1050/2fons.ru-7188.jpg)'
             }
         },
         title: {
@@ -42,7 +42,7 @@ export default {
         },
         background: {
             style: {
-                background: '#ffbdd3'
+                background: 'url(https://w-dog.ru/wallpapers/1/6/306574654894781.jpg)'
             }
         },
         buttonOK: {
@@ -78,12 +78,12 @@ export default {
         namePage: 'Меню',
         background: {
             style: {
-                background: '#ffbdd3'
+                background: '#ffffff'
             }
         },
         header: {
             style: {
-                background: '#ffffff'
+                background: '#ffff1123'
             },
             buttonback: {
                 text: 'Назад',
@@ -132,7 +132,7 @@ export default {
         namePage: 'Страница блюда',
         background: {
             style: {
-                background: 'rgba(46,46,51,.2)'
+                background: 'url(https://data2.1freewallpapers.com/detail/spaghetti-vegetables-oil.jpg)'
             }
         },
         buttonClose: {
@@ -207,7 +207,7 @@ export default {
         namePage: 'Корзина покупок',
         background: {
             style: {
-                background: 'rgba(46,46,51,.2)'
+                background: 'url(https://data2.1freewallpapers.com/detail/spaghetti-vegetables-oil.jpg)' //'rgba(46,46,51,.2)'
             }
         },
         productContainer: {
@@ -260,7 +260,7 @@ export default {
         namePage: 'Страница оплаты',
         background: {
             style: {
-                background: '#ffbdd3'
+                background: '#faffea'
             }
         },
         header: {
