@@ -3,7 +3,7 @@ export default {
         namePage: 'Страница загрузки',
         background: {
             style: {
-                background: 'url(http://www.2fons.ru/pic/201405/1680x1050/2fons.ru-7188.jpg)'
+                background: 'url(https://w-dog.ru/wallpapers/1/56/426506910763032.jpg)'
             }
         },
         title: {

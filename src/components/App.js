@@ -17,7 +17,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            page: 'loadingPage',
+            page: configPage.loadingPage,
             appName: '',
             user: {},
             pageConfig: pageConfig
@@ -25,22 +25,21 @@ export default class App extends React.Component {
     }
 
     isLogin() {
-        const {length} = document.querySelectorAll('.root.adminPanelPage');
-        if (length > 0) {
+        const {length: lengthAdminPanelPage} = document.querySelectorAll('.root.adminPanelPage');
+        if (lengthAdminPanelPage > 0) {
+            return;
+        }
+        const {length: loadingPageLR} = document.querySelectorAll('.root.loadingPageLR');
+        const {length: userLength} = Object.keys(this.state.user);
+        if (loadingPageLR && (!userLength)) {
             return;
         }
         Fetch.Get('/users/info')
             .then((res) => {
-                const {length: loadingPageLR} = document.querySelectorAll('.root.loadingPageLR');
-                const {length: userLength} = Object.keys(this.state.user);
-                if (loadingPageLR && (!userLength)) {
-                    return;
-                }
-
                 if (res.status === 0) {
                     const {length: loginLength} = document.querySelectorAll('.root.loginPage');
                     const {length: registerLength} = document.querySelectorAll('.root.registerPage');
-                    if (loginLength || registerLength) {
+                    if (loginLength || registerLength || loadingPageLR) {
                         return;
                     }
                     this.setState((state) => {
