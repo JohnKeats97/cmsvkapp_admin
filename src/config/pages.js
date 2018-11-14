@@ -1,4 +1,5 @@
 export default {
+    serviceId: '9291',
     loadingPage: {
         namePage: 'Страница загрузки',
         background: {
@@ -44,7 +45,7 @@ export default {
         },
         background: {
             style: {
-                background: 'url(https://w-dog.ru/wallpapers/1/6/306574654894781.jpg)',
+                background: 'url(https://storge.pic2.me/upload/360/5692758195371.jpg)',
                 backgroundSize: 'cover'
             }
         },
