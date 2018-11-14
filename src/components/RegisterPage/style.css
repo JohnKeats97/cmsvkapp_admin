@@ -48,9 +48,15 @@
     border-radius: 0;
 }
 
-.RegisterPage-inputPassword {
+.RegisterPage-inputId {
     position: relative;
     bottom: 1px;
+    border-radius: 0;
+}
+
+.RegisterPage-inputPassword {
+    position: relative;
+    bottom: 2px;
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;

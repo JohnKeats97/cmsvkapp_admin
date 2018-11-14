@@ -19,17 +19,20 @@ export default class RegisterPage extends React.Component {
     onRegisterClick() {
         const email = document.querySelector('.RegisterPage-inputEMail').value;
         const login = document.querySelector('.RegisterPage-inputLogin').value;
+        const serviceId = document.querySelector('.RegisterPage-inputId').value;
         const password = document.querySelector('.RegisterPage-inputPassword').value;
         Fetch.Post('/users', {email : email, login: login, password : password})
             .then(() => {
                 const appName = login;
                 Fetch.Post('/users/login', {loginEmail : email, password: password})
                     .then((user) => {
+                        const config = this.props.pageConfig;
+                        config.serviceId = serviceId;
                         Fetch.Post('/apps', {
                             appName : appName,
                             creatorLogin: login,
-                            serviceId : 16277,
-                            config: JSON.stringify(this.props.pageConfig)
+                            serviceId : serviceId,
+                            config: JSON.stringify(config)
                         })
                             .then(() => {
                                 this.props.onChangeUserAndApp(user, appName);
@@ -58,6 +61,7 @@ export default class RegisterPage extends React.Component {
                     <h2 className="form-signin-heading">Sign up</h2>
                     <input className="RegisterPage-input RegisterPage-inputEMail form-control" placeholder="Email address" />
                     <input className="RegisterPage-input RegisterPage-inputLogin form-control" placeholder="Login" />
+                    <input className="RegisterPage-input RegisterPage-inputId form-control" placeholder="Service id" />
                     <input className="RegisterPage-input RegisterPage-inputPassword form-control" placeholder="Password" />
                     <div>
                         <div
