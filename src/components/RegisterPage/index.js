@@ -21,6 +21,10 @@ export default class RegisterPage extends React.Component {
         const login = document.querySelector('.RegisterPage-inputLogin').value;
         const serviceId = document.querySelector('.RegisterPage-inputId').value;
         const password = document.querySelector('.RegisterPage-inputPassword').value;
+        if (!email || !login || !serviceId || !password) {
+            alert('Введите коректные данные');
+            return;
+        }
         Fetch.Post('/users', {email : email, login: login, password : password})
             .then(() => {
                 const appName = login;
@@ -48,7 +52,7 @@ export default class RegisterPage extends React.Component {
                     })
             })
             .catch(() => {
-                alert('Этот пользователь уже зарегестрирован');
+                alert('Ошибка создания пользователя, возможно этот пользователь уже зарегестрирован');
                 this.props.onChangePage(configPage.registerPage);
             });
         this.props.onChangePage(configPage.loadingPageLR);

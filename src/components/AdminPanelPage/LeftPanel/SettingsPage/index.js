@@ -33,11 +33,15 @@ export default class SettingsPage extends React.Component {
     }
 
     componentDidMount() {
-        const {top} = document.querySelector(`.${this.ClassName}`).getBoundingClientRect();
-        const maxHeight = document.documentElement.clientHeight - top - 15;
-        this.setState((state => (state.style = {
-            maxHeight: `${maxHeight}px`
-        },state)));
+        console.log(123)
+        window.addEventListener('resize', () => {
+            console.log(456)
+            const {top} = document.querySelector(`.${this.ClassName}`).getBoundingClientRect();
+            const maxHeight = document.documentElement.clientHeight - top - 15;
+            this.setState((state => (state.style = {
+                maxHeight: `${maxHeight}px`
+            },state)));
+        });
     }
 
     render () {

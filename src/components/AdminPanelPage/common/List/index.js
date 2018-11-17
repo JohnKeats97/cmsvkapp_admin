@@ -5,6 +5,9 @@ import Item from '../Item/index'
 
 const generateList = (list, classItem, styleItem, onClickItem) => {
     return list.map((item) => {
+        if (!item[0]) {
+            return '';
+        }
         return <Item
             data={item}
             className={classItem}

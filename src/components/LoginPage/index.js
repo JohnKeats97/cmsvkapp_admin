@@ -15,6 +15,10 @@ export default class LoginPage extends React.Component {
     onLoginClick() {
         const email = document.querySelector('.LoginPage-inputEMail').value;
         const password = document.querySelector('.LoginPage-inputPassword').value;
+        if (!email || !password) {
+            alert('Введите коректные данные');
+            return;
+        }
         Fetch.Post('/users/login', {loginEmail : email, password: password})
             .then((res) => {
                 this.props.onChangeUser(res);
