@@ -1,4 +1,5 @@
-# client
+## Конструтор ресторанных приложений в VK.com.
 
-npm i
-npm run
+# Запуск
+- npm i
+- npm start
