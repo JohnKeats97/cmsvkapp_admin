@@ -1,10 +1,8 @@
 .components-RightPanel-BodyRight-root {
     position: relative;
     display: block;
-    margin-top: 40px;
 
     height: 650px;
     width: 850px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 10px;
 }
