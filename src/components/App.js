@@ -65,7 +65,7 @@ export default class App extends React.Component {
                         }
                         this.setState((state)=>{
                             state.pageConfig = response;
-                            state.appName = res.login;
+                            state.appName = appName;
                             state.page = configPage.adminPanelPage;
                             return state
                         });
