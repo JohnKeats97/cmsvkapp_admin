@@ -49,8 +49,8 @@ export default class App extends React.Component {
                     });
                     return;
                 }
-
-                Fetch.Get(`/apps/${res.login}/config`)
+                const appName = (res.login).replace(/\s+/g, '');
+                Fetch.Get(`/apps/${appName}/config`)
                     .then(response => {
                         if(response.status === 9) {
                             // this.setState((state)=>{
