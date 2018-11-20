@@ -21,7 +21,7 @@ export default class RegisterPage extends React.Component {
         const login = document.querySelector('.RegisterPage-inputLogin').value;
         const serviceId = document.querySelector('.RegisterPage-inputId').value;
         const password = document.querySelector('.RegisterPage-inputPassword').value;
-        if (!email || !login || !serviceId || !password) {
+        if (!email || !login || !Number(serviceId) || !password) {
             alert('Введите коректные данные');
             return;
         }
