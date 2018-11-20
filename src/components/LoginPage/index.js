@@ -13,8 +13,8 @@ export default class LoginPage extends React.Component {
     }
 
     onLoginClick() {
-        const email = document.querySelector('.LoginPage-inputEMail').value;
-        const password = document.querySelector('.LoginPage-inputPassword').value;
+        const email = (document.querySelector('.LoginPage-inputEMail').value).trim();
+        const password = (document.querySelector('.LoginPage-inputPassword').value).trim();
         if (!email || !password) {
             alert('Введите коректные данные');
             return;

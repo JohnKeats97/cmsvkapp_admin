@@ -17,10 +17,10 @@ export default class RegisterPage extends React.Component {
     }
 
     onRegisterClick() {
-        const email = document.querySelector('.RegisterPage-inputEMail').value;
-        const login = document.querySelector('.RegisterPage-inputLogin').value;
-        const serviceId = document.querySelector('.RegisterPage-inputId').value;
-        const password = document.querySelector('.RegisterPage-inputPassword').value;
+        const email = (document.querySelector('.RegisterPage-inputEMail').value).trim();
+        const login = (document.querySelector('.RegisterPage-inputLogin').value).trim();
+        const serviceId = (document.querySelector('.RegisterPage-inputId').value).trim();
+        const password = (document.querySelector('.RegisterPage-inputPassword').value).trim();
         if (!email || !login || !Number(serviceId) || !password) {
             alert('Введите коректные данные');
             return;
