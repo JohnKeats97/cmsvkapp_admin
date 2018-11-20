@@ -27,7 +27,7 @@ export default class RegisterPage extends React.Component {
         }
         Fetch.Post('/users', {email : email, login: login, password : password})
             .then(() => {
-                const appName = login;
+                const appName = login.replace(/\s+/g, '');
                 Fetch.Post('/users/login', {loginEmail : email, password: password})
                     .then((user) => {
                         const config = this.props.pageConfig;
