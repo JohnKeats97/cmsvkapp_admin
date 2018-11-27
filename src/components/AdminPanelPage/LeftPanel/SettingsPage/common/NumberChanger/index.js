@@ -14,12 +14,12 @@ export default class NumberChanger extends React.Component {
         const {props} = this;
         let value = e.target.value;
 
+        value = Number(value);
+
         if(!value) {
             props.onChange({value: (props.minValue ? props.minValue : `0px`), pathConfig: props.pathConfig});
             return;
         }
-
-        value = Number(value);
 
         if(typeof props.minValue !== 'undefined' && value < props.minValue) {
             value = props.minValue;

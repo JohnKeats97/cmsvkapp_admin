@@ -4,14 +4,14 @@ export default {
         namePage: 'Страница загрузки',
         background: {
             style: {
-                background: 'url(https://w-dog.ru/wallpapers/1/56/426506910763032.jpg)',
+                background: 'url(https://social-sites.delivery-club.ru/img/covers/cover-3.jpg)',
                 backgroundSize: 'cover'
             }
         },
         title: {
             text: 'Загрузка...',
             style: {
-                color: '#000000',
+                color: '#ffffff',
                 fontSize: '30px',
                 left: '350px',
                 top: '250px',
@@ -24,7 +24,7 @@ export default {
             },
             circle: {
                 style: {
-                    background: '#000fff',
+                    background: '#696969',
                     backgroundSize: 'cover',
                     width: '26px',
                     height: '26px'
@@ -37,31 +37,31 @@ export default {
         title: {
             text: 'Введите адрес доставки',
             style: {
-                color: '#000000',
+                color: '#ffffff',
                 fontSize: '25px',
                 left: '270px',
-                top: '250px',
+                top: '260px',
             }
         },
         background: {
             style: {
-                background: 'url(https://storge.pic2.me/upload/360/5692758195371.jpg)',
+                background: 'url(https://social-sites.delivery-club.ru/img/covers/cover-3.jpg)',
                 backgroundSize: 'cover'
             }
         },
         buttonOK: {
             text: 'Принять',
             style: {
-                background: '#ffbd00',
+                background: '#9ccd2d',
                 backgroundSize: 'cover',
-                color: '#ff0d00',
+                color: '#ffffff',
                 height: '50px',
                 width: '100px',
                 borderRadius: '10px',
                 left: '570px',
                 top: '310px',
                 fontSize: '15px',
-                borderWidth: '1px'
+                borderWidth: '0px'
             }
         },
         inputAddress: {
@@ -76,7 +76,7 @@ export default {
                 left: '170px',
                 top: '310px',
                 fontSize: '15px',
-                borderWidth: '1px'
+                borderWidth: '0px'
             }
         }
     },
@@ -84,45 +84,45 @@ export default {
         namePage: 'Меню',
         background: {
             style: {
-                background: '#ffffff',
+                background: 'rgb(246, 246, 246)',
                 backgroundSize: 'cover'
             }
         },
         header: {
             style: {
-                background: '#ffff1123',
+                background: '#fdfdfd',
                 backgroundSize: 'cover'
             },
             buttonback: {
                 text: 'Назад',
                 style: {
-                    background: '#abcd12',
+                    background: 'rgb(246, 246, 246)',
                     backgroundSize: 'cover',
-                    color: '#000000',
+                    color: 'rgb(155, 150, 150)',
                     borderRadius: '10px',
-                    borderWidth: '1px',
+                    borderWidth: '0px',
                     fontSize: '17px'
                 }
             },
             address: {
                 style: {
-                    color: '#000000',
+                    color: 'rgb(46, 46, 51)',
                     fontSize: '20px',
                     top: '15px'
                 }
             },
             basket: {
                 style: {
-                    background: '#123456',
+                    background: 'rgb(246, 246, 246)',
                     backgroundSize: 'cover',
-                    color: '#C5EFF4',
+                    color: 'rgb(155, 150, 150)',
                     fontSize: '17px'
                 }
             }
         },
         title: {
             style: {
-                color: '#000000',
+                color: 'rgb(46, 46, 51)',
                 fontSize: '20px'
             }
         },
