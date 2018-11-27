@@ -4,6 +4,7 @@
     height: 440px;
     width: 400px;
     overflow-y: auto;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-BasketWindow-ProductContainer-FoodContainer-list {
