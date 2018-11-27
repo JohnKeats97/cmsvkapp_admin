@@ -3,6 +3,7 @@
     display: none;
     position: relative;
     overflow-y: auto;
+    background-size: cover !important;
 }
 
 .menuPage .components-RightPanel-BodyRight-WindowApp-MenuWindow-root {
@@ -52,6 +53,7 @@
     cursor: pointer;
     user-select: none;
     height: 32px;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-MenuWindow-item:hover .components-RightPanel-BodyRight-WindowApp-MenuWindow-item-button {

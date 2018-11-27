@@ -14,4 +14,5 @@
 .components-RightPanel-BodyRight-WindowApp-PayWindow-LeftPanel-InputContainer-input {
     outline: none;
     padding-left: 15px;
+    background-size: cover !important;
 }

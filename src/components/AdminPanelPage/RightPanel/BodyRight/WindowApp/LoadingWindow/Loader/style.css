@@ -3,6 +3,7 @@
 }
 
 .circleG{
+    background-size: cover !important;
     float:left;
     height:26px;
     margin-left:14px;

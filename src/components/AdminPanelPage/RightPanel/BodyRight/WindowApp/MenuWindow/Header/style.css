@@ -3,6 +3,7 @@
     display: block;
     height: 55px;
     width: 100%;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-MenuWindow-Header-address {
@@ -20,6 +21,7 @@
     cursor: pointer;
     line-height: 55px;
     padding: 0 15px 0 20px;
+    background-size: cover !important;
 }
 .components-RightPanel-BodyRight-WindowApp-MenuWindow-Header-price {
     position: relative;

@@ -2,6 +2,7 @@
     height: 100%;
     display: none;
     position: relative;
+    background-size: cover !important;
 }
 
 .payPage .components-RightPanel-BodyRight-WindowApp-PayWindow-root {

@@ -1,6 +1,7 @@
 .components-RightPanel-BodyRight-WindowApp-ProductWindow-ImageContainer-root {
     display: block;
     position: absolute;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-ProductWindow-ImageContainer-image {

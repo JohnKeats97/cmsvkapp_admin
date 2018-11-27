@@ -2,6 +2,7 @@
     height: 100%;
     display: none;
     position: relative;
+    background-size: cover !important;
 }
 
 .productPage .components-RightPanel-BodyRight-WindowApp-ProductWindow-root {

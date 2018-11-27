@@ -2,6 +2,7 @@
     position: relative;
     height: 100%;
     display: none;
+    background-size: cover !important;
 }
 
 .addressPage .components-RightPanel-BodyRight-WindowApp-AddressWindow-root {
@@ -17,10 +18,12 @@
     display: block;
     position: absolute;
     outline: none;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-AddressWindow-inputAddress {
     padding-left: 15px;
     position: absolute;
     outline: none;
+    background-size: cover !important;
 }

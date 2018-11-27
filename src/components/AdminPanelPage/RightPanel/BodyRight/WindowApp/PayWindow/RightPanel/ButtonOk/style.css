@@ -7,4 +7,5 @@
     height: 40px;
     text-align: center;
     padding-left: 20px;
+    background-size: cover !important;
 }

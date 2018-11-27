@@ -4,6 +4,7 @@
     height: 595px;
     width: 290px;
     display: block;
+    background-size: cover !important;
 }
 
 .components-RightPanel-BodyRight-WindowApp-PayWindow-RightPanel-price {
