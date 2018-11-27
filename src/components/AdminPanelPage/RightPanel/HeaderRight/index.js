@@ -18,7 +18,11 @@ export default class HeaderRight extends React.Component {
                 console.log(res);
                 alert(res.url)
             })
-            .catch(() => {
+            .catch((res) => {
+                if (res.status === 403) {
+                    window.location.reload();
+                    return;
+                }
                 alert('Ошибка деплоя')
             });
     };
@@ -28,7 +32,11 @@ export default class HeaderRight extends React.Component {
             .then(()=>{
                 this.props.onChangePage(configPage.loginPage)
             })
-            .catch(() => {
+            .catch((res) => {
+                if (res.status === 403) {
+                    window.location.reload();
+                    return;
+                }
                 alert('Ошибка выхода')
             })
     };
