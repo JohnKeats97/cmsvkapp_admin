@@ -807,7 +807,7 @@ export default (props) => {
         Сумма заказа
 
         <BackgroundChanger
-            title="Order text color:"
+            title="Order color:"
             pathConfig={PayPageConfig.rightPanel.textContainer.order.color}
             data={props.pageConfig.rightPanel.textContainer.order.style.color}
             onChange={props.onChange}
@@ -825,7 +825,7 @@ export default (props) => {
         Стоймость доставки
 
         <BackgroundChanger
-            title="Delivery text color:"
+            title="Delivery color:"
             pathConfig={PayPageConfig.rightPanel.textContainer.delivery.color}
             data={props.pageConfig.rightPanel.textContainer.delivery.style.color}
             onChange={props.onChange}
@@ -843,7 +843,7 @@ export default (props) => {
         Общая стоймость заказа
 
         <BackgroundChanger
-            title="Result text color:"
+            title="Result color:"
             pathConfig={PayPageConfig.rightPanel.textContainer.result.color}
             data={props.pageConfig.rightPanel.textContainer.result.style.color}
             onChange={props.onChange}

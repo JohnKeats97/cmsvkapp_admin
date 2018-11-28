@@ -34,7 +34,6 @@ export default {
         background: 'menuPage.buttonOk.style.background',
         borderRadius: 'menuPage.buttonOk.style.borderRadius',
         color: 'menuPage.buttonOk.style.color',
-        fontSize: 'menuPage.buttonOk.style.fontSize',
-        borderWidth: 'menuPage.buttonOk.style.borderWidth'
+        fontSize: 'menuPage.buttonOk.style.fontSize'
     },
 }

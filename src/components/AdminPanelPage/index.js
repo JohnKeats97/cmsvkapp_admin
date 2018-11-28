@@ -21,12 +21,12 @@ export default class AdminPanel extends React.Component {
     onChange (args) {
         this.setState((state)=>{
             state.pageConfig = SetObjectValue(state.pageConfig, args.pathConfig, '.', args.value);
-            Fetch.Post(`/apps/${this.props.appName}/config`, state.pageConfig)
-                .catch((res) => {
+            Fetch.Post(`/apps/${this.props.appName}/config`, state.pageConfig).
+                catch((res) => {
                     if (res.status === 403) {
                         window.location.reload();
                     }
-                });
+            }) ;
             return state;
         });
     }
