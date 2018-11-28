@@ -221,7 +221,7 @@ export default {
         namePage: 'Корзина покупок',
         background: {
             style: {
-                background: 'url(https://data2.1freewallpapers.com/detail/spaghetti-vegetables-oil.jpg)', //'rgba(46,46,51,.2)'
+                background: 'rgba(46,46,51,.2)',
                 backgroundSize: 'cover'
             }
         },
@@ -293,9 +293,10 @@ export default {
                     width: '100px',
                     background: '#eee',
                     backgroundSize: 'cover',
-                    color: '#2e2e33',
+                    color: 'rgb(155, 150, 150)',
                     borderRadius: '10px',
-                    borderWidth: '0px'
+                    borderWidth: '0px',
+                    fontSize: '17px'
                 }
             }
         },
