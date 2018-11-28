@@ -182,13 +182,6 @@ export default (props) => {
             onChange={props.onChange}
         />
         <NumberChanger
-            title="Button border width:"
-            minValue={0}
-            pathConfig={MenuPageConfig.buttonOk.borderWidth}
-            data={props.pageConfig.buttonOk.style.borderWidth}
-            onChange={props.onChange}
-        />
-        <NumberChanger
             title="Button border radius:"
             minValue={0}
             pathConfig={MenuPageConfig.buttonOk.borderRadius}

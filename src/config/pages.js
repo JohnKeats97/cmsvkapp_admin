@@ -84,7 +84,7 @@ export default {
         namePage: 'Меню',
         background: {
             style: {
-                background: 'rgb(246, 246, 246)',
+                background: 'rgb(253, 253, 253)',
                 backgroundSize: 'cover'
             }
         },
@@ -134,8 +134,7 @@ export default {
                 color: '#ffffff',
                 width: '100px',
                 borderRadius: '2px',
-                fontSize: '15px',
-                borderWidth: '1px'
+                fontSize: '15px'
             }
         }
     },
@@ -143,7 +142,7 @@ export default {
         namePage: 'Страница блюда',
         background: {
             style: {
-                background: 'url(https://data2.1freewallpapers.com/detail/spaghetti-vegetables-oil.jpg)',
+                background: 'rgba(46,46,51,.2)',
                 backgroundSize: 'cover'
             }
         },
@@ -161,7 +160,7 @@ export default {
         },
         productContainer: {
             style: {
-                background: '#fff00190',
+                background: '#ffffff',
                 backgroundSize: 'cover',
                 height: '600px',
                 width: '350px',
@@ -228,33 +227,33 @@ export default {
         },
         productContainer: {
             style: {
-                background: '#fff00190',
+                background: '#ffffff',
                 backgroundSize: 'cover',
                 left: '220px'
             }
         },
         foodContainer: {
             style: {
-                background: '#f6f6f6',
+                background: '#ffffff',
                 backgroundSize: 'cover'
             }
         },
         textContainer: {
             order: {
                 style: {
-                    color: '#000fff',
+                    color: '#919399',
                     fontSize: '18px'
                 }
             },
             delivery: {
                 style: {
-                    color: '#000fff',
+                    color: '#919399',
                     fontSize: '18px'
                 }
             },
             result: {
                 style: {
-                    color: '#000fff',
+                    color: '#2e2e33',
                     fontSize: '21px'
                 }
             }
@@ -264,7 +263,7 @@ export default {
             style: {
                 background: '#97c62b',
                 backgroundSize: 'cover',
-                color: '#000533',
+                color: '#ffffff',
                 height: '40px',
                 width: '300px',
                 borderRadius: '5px',
@@ -279,7 +278,7 @@ export default {
         namePage: 'Страница оплаты',
         background: {
             style: {
-                background: '#faffea',
+                background: '#ffffff',
                 backgroundSize: 'cover'
             }
         },
@@ -292,11 +291,11 @@ export default {
                 text: 'Назад',
                 style: {
                     width: '100px',
-                    background: '#abcd12',
+                    background: '#eee',
                     backgroundSize: 'cover',
-                    color: '#000000',
+                    color: '#2e2e33',
                     borderRadius: '10px',
-                    borderWidth: '1px'
+                    borderWidth: '0px'
                 }
             }
         },
@@ -318,7 +317,7 @@ export default {
                 title: {
                     text: 'Телефон',
                     style: {
-                        color: '#000000',
+                        color: '#f36',
                         fontSize: '20px'
                     }
                 },
@@ -486,25 +485,25 @@ export default {
         },
         rightPanel: {
             style: {
-                background: '#ffb112',
+                background: '#f1efef',
                 backgroundSize: 'cover'
             },
             textContainer: {
                 order: {
                     style: {
-                        color: '#000fff',
+                        color: '#919399',
                         fontSize: '18px'
                     }
                 },
                 delivery: {
                     style: {
-                        color: '#000fff',
+                        color: '#919399',
                         fontSize: '18px'
                     }
                 },
                 result: {
                     style: {
-                        color: '#000fff',
+                        color: '#2e2e33',
                         fontSize: '21px'
                     }
                 }
@@ -514,7 +513,7 @@ export default {
                 style: {
                     background: '#97c62b',
                     backgroundSize: 'cover',
-                    color: '#000533',
+                    color: '#ffffff',
                     height: '40px',
                     width: '200px',
                     borderRadius: '5px',
