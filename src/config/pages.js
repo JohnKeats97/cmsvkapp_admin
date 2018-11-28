@@ -293,9 +293,10 @@ export default {
                     width: '100px',
                     background: '#eee',
                     backgroundSize: 'cover',
-                    color: '#2e2e33',
+                    color: 'rgb(155, 150, 150)',
                     borderRadius: '10px',
-                    borderWidth: '0px'
+                    borderWidth: '0px',
+                    fontSize: '17px'
                 }
             }
         },
