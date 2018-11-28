@@ -66,7 +66,7 @@ export default class RegisterPage extends React.Component {
                     <input className="RegisterPage-input RegisterPage-inputEMail form-control" placeholder="Email address" />
                     <input className="RegisterPage-input RegisterPage-inputLogin form-control" placeholder="Login" />
                     <input className="RegisterPage-input RegisterPage-inputId form-control" placeholder="Service id" />
-                    <input className="RegisterPage-input RegisterPage-inputPassword form-control" placeholder="Password" />
+                    <input className="RegisterPage-input RegisterPage-inputPassword form-control" type="password" placeholder="Password" />
                     <div>
                         <div
                             className="RegisterPage-button RegisterPage-buttonSignUp btn btn-lg btn-primary btn-block"

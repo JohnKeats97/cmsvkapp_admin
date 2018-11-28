@@ -41,7 +41,7 @@ export default class LoginPage extends React.Component {
                 <div className="form-signin" role="form">
                     <h2 className="form-signin-heading">Sign in</h2>
                     <input className="LoginPage-input LoginPage-inputEMail form-control" placeholder="Email address" />
-                    <input className="LoginPage-input LoginPage-inputPassword form-control" placeholder="Password" />
+                    <input className="LoginPage-input LoginPage-inputPassword form-control" type="password" placeholder="Password" />
                     <div>
                         <div
                             className="LoginPage-button LoginPage-buttonSignIn btn btn-lg btn-primary btn-block"
