@@ -96,7 +96,7 @@ export default {
             buttonback: {
                 text: 'Назад',
                 style: {
-                    background: 'rgb(246, 246, 246)',
+                    background: 'rgb(238, 238, 238)',
                     backgroundSize: 'cover',
                     color: 'rgb(155, 150, 150)',
                     borderRadius: '10px',
@@ -113,7 +113,7 @@ export default {
             },
             basket: {
                 style: {
-                    background: 'rgb(246, 246, 246)',
+                    background: 'rgb(238, 238, 238)',
                     backgroundSize: 'cover',
                     color: 'rgb(155, 150, 150)',
                     fontSize: '17px'
